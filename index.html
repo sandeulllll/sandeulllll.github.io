@@ -71,6 +71,133 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-什么是数据结构" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/06/28/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="article-date">
+  <time class="dt-published" datetime="2022-06-27T16:33:21.477Z" itemprop="datePublished">2022-06-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="什么是数据结构"><a href="#什么是数据结构" class="headerlink" title="什么是数据结构"></a>什么是数据结构</h3><ul>
+<li><p><strong>数据对象</strong>在计算机中的组织方式</p>
+<ul>
+<li>逻辑结构<ul>
+<li>线性结构  -&gt;   一对一</li>
+<li>树 -&gt;  一对多</li>
+<li>图 -&gt;  多对多</li>
+</ul>
+</li>
+<li>物理存储结构</li>
+</ul>
+</li>
+<li><p>数据对象必定与一系列加在其上的<strong>操作</strong>相关联</p>
+</li>
+<li><p>实现这些操作的方法就叫做<strong>算法</strong></p>
+</li>
+<li></li>
+<li><p>例1——&gt; <strong>数据的组织方式</strong></p>
+<ul>
+<li>如何在书架上摆放图书<ul>
+<li>新书怎么插入</li>
+<li>怎么查找某本指定的书</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>例2——&gt; <strong>空间的利用效率</strong></p>
+<ul>
+<li>打印1到N的所有正整数<ul>
+<li>循环实现</li>
+<li>递归实现<ul>
+<li>易于自己和他人理解的程序</li>
+<li>对空间的占用</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>例3——&gt;<strong>算法的巧妙程度</strong></p>
+<ul>
+<li><p>求给定多项式在定点x处的值</p>
+<ul>
+<li>直接翻译实现（慢）</li>
+<li>巧妙地运用结合律</li>
+</ul>
+</li>
+<li><p>clock（）   </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">必须要 #include &lt;time.h&gt;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>捕捉从程序开始到clock（）被调用时所耗费的时间</p>
+</li>
+<li><p>单位是clock tick （时钟打点）</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">常数 CLK_TCK  机器时钟每秒所走的时钟打点数</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>可以计算一个函数到底跑了多少秒钟,模板：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;time.h&gt;</span>        <span class="comment">//clock()</span></span></span><br><span class="line"><span class="type">clock_t</span> start,stop;      <span class="comment">//clock_t 是clock()函数返回的变量类型</span></span><br><span class="line"><span class="type">double</span> duration;         <span class="comment">//记录被测试函数运行时间，以秒为单位</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;   <span class="comment">//不在测试范围内的准备工作写在clock函数调用之前</span></span><br><span class="line">    <span class="comment">//例如读书入、预处理等等</span></span><br><span class="line">	start = <span class="built_in">clock</span>();</span><br><span class="line">	<span class="built_in">MyFunction</span>();</span><br><span class="line">	stop = <span class="built_in">clock</span>();</span><br><span class="line">	duration = ((<span class="type">double</span>) (stop - start)) /CLK_TCK;</span><br><span class="line">    <span class="comment">//其他不在测试范围的处理写在后面</span></span><br><span class="line">    <span class="comment">//例如输出duration 的值</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">函数的运行时间甚至不到一个tick</span><br><span class="line">如何测时间？</span><br><span class="line">解决方案： 让被测函数重复运行多次，使得测出的总的时钟打点间隔充分长，</span><br><span class="line">          最后计算被测函数平均每次运行的时间即可。</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h3><ul>
+<li><p>数据类型</p>
+<ul>
+<li>数据对象集</li>
+<li>数据集合相关联的操作集</li>
+</ul>
+</li>
+<li><p>抽象：</p>
+<ul>
+<li>描述数据类型的方法不依赖于具体实现<ul>
+<li>跟存放数据的机器无关</li>
+<li>跟数据存储的物理结构无关</li>
+<li>跟实现操作的算法和编程语言均无关</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>只描述<strong>数据对象集</strong>和<strong>相关操作集</strong>是什么</p>
+</li>
+<li><p>不关心它是<strong>怎么做到</strong>的（不关心具体实现）</p>
+</li>
+<li><p><em><strong>例子</strong></em> ：关于“矩阵”的抽象数据类型的定义 </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">类型名称 ： 矩阵</span><br><span class="line">数据对象集 ： M * N 个三元组&lt;a,i,j&gt;，其中a是矩阵元素的值，i是元素的行号，j是元素所在的列号</span><br><span class="line">操作集： </span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>抽象之处：</p>
+<ul>
+<li>对矩阵元素的具体数据类型不关心——&gt; <em>提高了适用性</em></li>
+<li>不关心矩阵在程序里的存法——&gt;不关心底层细节而专注于顶层的框架逻辑</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/06/28/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-id="cl4zs9oad0000psuh7tcj090h" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/06/27/hello-world/" class="article-date">
@@ -436,6 +563,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/06/28/%E4%BB%80%E4%B9%88%E6%98%AF%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2022/06/27/hello-world/">Hello World</a>
