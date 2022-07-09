@@ -6,10 +6,12 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
+  <meta name="description" content="庞玉的博客">
+<meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="庞玉的博客">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
@@ -71,6 +73,155 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-digital logic" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/09/digital%20logic/" class="article-date">
+  <time class="dt-published" datetime="2022-07-09T07:04:09.259Z" itemprop="datePublished">2022-07-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/09/digital%20logic/">DigitalLogic</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>什么是补码<ul>
+<li>一种二进制表示方法</li>
+</ul>
+</li>
+<li>逻辑代数<ul>
+<li>逻辑函数表达式越简单,设计出来的相应逻辑电路也越简单<ul>
+<li>逻辑函数化简</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>基本器件</li>
+<li>组合电路分析方法</li>
+</ul>
+<h5 id="测验1"><a href="#测验1" class="headerlink" title="测验1"></a>测验1</h5><ul>
+<li>进制转换</li>
+<li>求反码补码<ul>
+<li>原码<ul>
+<li>数值前面增加符号位<ul>
+<li>正数0</li>
+<li>负数1</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>反码<ul>
+<li>&#x3D;&#x3D;运算时不用去管符号位&#x3D;&#x3D;<ul>
+<li>正数<ul>
+<li>反码和原码相同</li>
+</ul>
+</li>
+<li>负数<ul>
+<li>将其对应正数按位取反</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;通过反码运算时输出值比预期差了一个1</li>
+</ul>
+</li>
+<li>补码<ul>
+<li>正数的补码:它本身</li>
+<li>0的补码: 它本身</li>
+<li>负数的补码<ul>
+<li>将其对应的正数按位求反再末位加1</li>
+<li>或者说,等于反码的末位加1</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;减法可以用一个数加上另一个的补码来表示</li>
+<li><em><strong>任何有模的计量系统,均可化减法为加法运算</strong></em></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>几种常用编码<ul>
+<li>十进制数的二进制编码<ul>
+<li>8421码<ul>
+<li>权值分别为8,4,2,1</li>
+<li>用四位来表示一位十进制码</li>
+</ul>
+</li>
+<li>2421码<ul>
+<li>从左到右<ul>
+<li>第一位的权值为2</li>
+<li>第二位的权值为4</li>
+<li>第三位的权值为2</li>
+<li>第四位的权值为1</li>
+</ul>
+</li>
+<li>将余3码01000101.1001转换成2421码是00010010.1100</li>
+</ul>
+</li>
+<li>余三码<ul>
+<li>表示的两个十进制数字相加时,产生进位加三,无进位减三</li>
+<li>余三码-&gt;8421码<ul>
+<li>每四位减去0011</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>&#x3D;&#x3D;电子器件的变化速度不一致时会产生错误的代码&#x3D;&#x3D;</li>
+</ul>
+</li>
+<li>可靠性编码<ul>
+<li>奇偶校验码</li>
+<li>格雷码<ul>
+<li>普通二进制码和格雷码的转换<ul>
+<li>二进制码-&gt;格雷码<ul>
+<li>从最右边起</li>
+<li>将每位与左边一位异或</li>
+</ul>
+</li>
+<li>格雷码-&gt;二进制码<ul>
+<li>从左边第二位起</li>
+<li>将每一位与左边以为异或</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>字符编码<ul>
+<li>ASCII</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/09/digital%20logic/" data-id="cl5djok8q0000touh29h125g3" data-title="DigitalLogic" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-week1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/07/week1/" class="article-date">
@@ -104,7 +255,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/07/week1/" data-id="cl5aqf3z10003hsuh4en7fw1j" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/07/week1/" data-id="cl5djok9c0003touh3w7rfp6k" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -165,7 +316,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/06/coding/%E8%BF%94%E5%9B%9E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" data-id="cl5aqf3z10004hsuh2o5555ew" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/06/coding/%E8%BF%94%E5%9B%9E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" data-id="cl5djok9e0004touharym3t1v" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -365,7 +516,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/02/first/" data-id="cl5aqf3yq0000hsuhd9848ttl" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/02/first/" data-id="cl5djok950001touhapm4fwia" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -416,7 +567,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5aqf3yx0001hsuhf8np3cja" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5djok9a0002touh0ef40cxp" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -450,7 +601,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5aqf3yz0002hsuh8ao713mz" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5djok9g0005touhcz5fbre8" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -493,6 +644,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/09/digital%20logic/">DigitalLogic</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/07/week1/">(no title)</a>
           </li>
         
@@ -506,10 +661,6 @@
         
           <li>
             <a href="/2022/06/27/hello-world/">Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/">(no title)</a>
           </li>
         
       </ul>
