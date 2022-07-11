@@ -6,15 +6,15 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="123456789101112131415char* solve(char* str) &amp;#123;    &#x2F;&#x2F; write code here    char* start, * end;    char t;    int l &#x3D; strlen(str);    printf(&quot;%d&quot;, l);    start &#x3D; str;    end &#x3D; str + 3;    fo">
+  <meta name="description" content="加快C++读入数据速度 使用 std::ios::sync_with_stdio(false); 语句取消cin 与 stdin 的同步 减少额外的开销 但是禁用后不能再混用cin 和scanf，cout 和 printf 注意要在IO之前解除绑定   使用 tie(0); 解除cin 与 cout 的绑定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/index.html">
+<meta property="og:url" content="http://example.com/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="123456789101112131415char* solve(char* str) &amp;#123;    &#x2F;&#x2F; write code here    char* start, * end;    char t;    int l &#x3D; strlen(str);    printf(&quot;%d&quot;, l);    start &#x3D; str;    end &#x3D; str + 3;    fo">
+<meta property="og:description" content="加快C++读入数据速度 使用 std::ios::sync_with_stdio(false); 语句取消cin 与 stdin 的同步 减少额外的开销 但是禁用后不能再混用cin 和scanf，cout 和 printf 注意要在IO之前解除绑定   使用 tie(0); 解除cin 与 cout 的绑定">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2022-06-18T16:22:27.865Z">
-<meta property="article:modified_time" content="2022-06-18T17:30:32.615Z">
+<meta property="article:published_time" content="2022-07-11T16:31:40.273Z">
+<meta property="article:modified_time" content="2022-07-11T16:38:14.244Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -73,10 +73,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-coding/双指针" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-coding/加快C++读入数据速度" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" class="article-date">
-  <time class="dt-published" datetime="2022-06-18T16:22:27.865Z" itemprop="datePublished">2022-06-19</time>
+    <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" class="article-date">
+  <time class="dt-published" datetime="2022-07-11T16:31:40.273Z" itemprop="datePublished">2022-07-12</time>
 </a>
     
   </div>
@@ -85,17 +85,20 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">char* solve(char* str) &#123;</span><br><span class="line">    // write code here</span><br><span class="line">    char* start, * end;</span><br><span class="line">    char t;</span><br><span class="line">    int l = strlen(str);</span><br><span class="line">    printf(&quot;%d&quot;, l);</span><br><span class="line">    start = str;</span><br><span class="line">    end = str + 3;</span><br><span class="line">    for (; start != end; start++, end--) &#123;</span><br><span class="line">        t = *start;</span><br><span class="line">        *start = *end;</span><br><span class="line">        *end = t;</span><br><span class="line">    &#125;</span><br><span class="line">    return str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>出错原因：循环条件 start !&#x3D; end 可能导致数组溢出</p>
-<ul>
-<li>&#x3D;&#x3D;<em>当字符长度为偶数时，该条件无法结束循环&#x3D;&#x3D;</em></li>
+        <h3 id="加快C-读入数据速度"><a href="#加快C-读入数据速度" class="headerlink" title="加快C++读入数据速度"></a>加快C++读入数据速度</h3><ul>
+<li>使用 std::ios::sync_with_stdio(false); 语句取消cin 与 stdin 的同步<ul>
+<li>减少额外的开销</li>
+<li>但是禁用后不能再混用cin 和scanf，cout 和 printf</li>
+<li>注意要在IO之前解除绑定</li>
 </ul>
-<p>修改： 将 start ！&#x3D; end 改为 start &lt;&#x3D; end</p>
+</li>
+<li>使用 tie(0); 解除cin 与 cout 的绑定</li>
+</ul>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5gyyl9p0005h4uh9rkb3e3t" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" data-id="cl5gyyl9o0004h4uh8ykydtvr" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -105,15 +108,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2022/06/27/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Hello World
-        
-      </div>
-    </a>
   
+    <a href="/2022/07/11/IoTlearning/day1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C++</div>
+    </a>
   
 </nav>
 
