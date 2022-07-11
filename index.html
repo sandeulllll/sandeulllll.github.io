@@ -73,6 +73,103 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-IoTlearning/day1" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/11/IoTlearning/day1/" class="article-date">
+  <time class="dt-published" datetime="2022-07-11T15:21:49.748Z" itemprop="datePublished">2022-07-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/11/IoTlearning/day1/">C++</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>A+B Problem （顺序结构）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a,b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    cout &lt;&lt; a+b &lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>苹果采购 （顺序结构）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a,b;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b;</span><br><span class="line">    cout &lt;&lt; a*b &lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Plus One on the Subset</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);   <span class="comment">//取消cin和stdin的同步</span></span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);            <span class="comment">//解除cin 与cout 的绑定</span></span><br><span class="line">	<span class="type">int</span> t;</span><br><span class="line">	cin &gt;&gt; t;</span><br><span class="line">	<span class="keyword">while</span> (t--) &#123;</span><br><span class="line">		<span class="type">int</span> num;</span><br><span class="line">		cin &gt;&gt; num;</span><br><span class="line">		<span class="type">int</span> max1 = <span class="number">0</span>, min1 = <span class="number">0x3f3f3f3f</span>;    <span class="comment">//0x3f3f3f3f</span></span><br><span class="line">		<span class="type">int</span> a[<span class="number">55</span>];</span><br><span class="line">		<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; num; i++) &#123;</span><br><span class="line">			cin &gt;&gt; a[i];</span><br><span class="line">			<span class="keyword">if</span> (a[i] &gt; max1) &#123;</span><br><span class="line">				max1 = a[i];</span><br><span class="line">			&#125;</span><br><span class="line">			<span class="keyword">if</span> (a[i] &lt; min1) &#123;</span><br><span class="line">				min1 = a[i];</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; max1 - min1 &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line"> </span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>培训 （结构体）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Student</span>&#123;</span><br><span class="line">    string name;</span><br><span class="line">    <span class="type">int</span> age;</span><br><span class="line">    <span class="type">int</span> sco;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">grow_up</span><span class="params">(Student&amp; stu)</span></span>&#123;</span><br><span class="line">    stu.age += <span class="number">1</span>;</span><br><span class="line">    stu.sco = stu.sco * <span class="number">6</span>/<span class="number">5</span>;</span><br><span class="line">    <span class="keyword">if</span> (stu.sco &gt; <span class="number">600</span>)&#123;</span><br><span class="line">        stu.sco = <span class="number">600</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="function">vector&lt;Student&gt; <span class="title">A</span><span class="params">(n)</span></span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        cin &gt;&gt; A[i].name &gt;&gt; A[i].age &gt;&gt; A[i].sco;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        <span class="built_in">grow_up</span>(A[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i &lt; n; i++)&#123;</span><br><span class="line">        cout &lt;&lt; A[i].name &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; A[i].age &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; A[i].sco &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一尺之棰（循环）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n,cnt = <span class="number">0</span>;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    <span class="keyword">while</span>(n &gt; <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        n /= <span class="number">2</span>;</span><br><span class="line">        cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; cnt+<span class="number">1</span> &lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>冰雹猜想（数组）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> n;</span><br><span class="line">    cin &gt;&gt; n;</span><br><span class="line">    vector&lt;<span class="type">int</span>&gt; A;</span><br><span class="line">    A.<span class="built_in">push_back</span>(n);</span><br><span class="line">    <span class="keyword">while</span> (n &gt; <span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>)</span><br><span class="line">            n /= <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            n = <span class="number">3</span> * n + <span class="number">1</span>;</span><br><span class="line">        A.<span class="built_in">push_back</span>(n);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="type">int</span> x: <span class="built_in">vector</span>&lt;<span class="type">int</span>&gt;(A.<span class="built_in">rbegin</span>(),A.<span class="built_in">rend</span>()))</span><br><span class="line">        cout &lt;&lt; x &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>询问学号（线性表）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> N 2000005</span></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> a[N];</span><br><span class="line">	<span class="type">int</span> m, n;</span><br><span class="line">	cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++)</span><br><span class="line">		cin &gt;&gt; a[i];</span><br><span class="line">	<span class="keyword">while</span> (m--)</span><br><span class="line">		cin &gt;&gt; n, cout &lt;&lt; a[n] &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>质数口袋（循环）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">bool</span> <span class="title">is_prime</span><span class="params">(<span class="type">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; i &lt;= n / i; i++)</span><br><span class="line">		<span class="keyword">if</span>(n % i == <span class="number">0</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="type">int</span> L; </span><br><span class="line">	cin &gt;&gt; L;</span><br><span class="line">	<span class="type">int</span> cnt = <span class="number">0</span>;</span><br><span class="line">	<span class="type">int</span> sum = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">2</span>; ; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="keyword">if</span>(<span class="built_in">is_prime</span>(i))</span><br><span class="line">		&#123;</span><br><span class="line">			sum += i;</span><br><span class="line">			<span class="keyword">if</span>(sum &gt; L)</span><br><span class="line">				<span class="keyword">break</span>;</span><br><span class="line">			cout &lt;&lt; i &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">			cnt++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	cout&lt;&lt; cnt &lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>数的性质（分支结构）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    cin &gt;&gt; x;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ((x % <span class="number">2</span> == <span class="number">0</span>) &amp;&amp; (x&gt;<span class="number">4</span> &amp;&amp; x &lt;= <span class="number">12</span>))</span><br><span class="line">        cout &lt;&lt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cout &lt;&lt; <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ((x % <span class="number">2</span> == <span class="number">0</span>) || (x&gt;<span class="number">4</span> &amp;&amp; x &lt;= <span class="number">12</span>))</span><br><span class="line">        cout &lt;&lt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cout &lt;&lt; <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ((x % <span class="number">2</span> == <span class="number">0</span>) ^ (x&gt;<span class="number">4</span> &amp;&amp; x &lt;= <span class="number">12</span>))</span><br><span class="line">        cout &lt;&lt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cout &lt;&lt; <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (!(x % <span class="number">2</span> == <span class="number">0</span>) &amp;&amp; !(x&gt;<span class="number">4</span> &amp;&amp; x &lt;= <span class="number">12</span>))</span><br><span class="line">        cout &lt;&lt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">        cout &lt;&lt; <span class="number">0</span>;</span><br><span class="line">    cout &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>闰年判断（选择判断）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  <span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> x;</span><br><span class="line">    cin &gt;&gt; x;</span><br><span class="line">    <span class="keyword">if</span> (((x%<span class="number">4</span>==<span class="number">0</span>)&amp;&amp; (x%<span class="number">100</span>)) || (x % <span class="number">400</span> == <span class="number">0</span>))</span><br><span class="line">        cout &lt;&lt; <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    cout &lt;&lt; <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>三位数排序</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">swap</span><span class="params">(<span class="type">int</span>&amp; a,<span class="type">int</span>&amp; b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> t = a;</span><br><span class="line">    a = b;</span><br><span class="line">    b = t;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">int</span> a,b,c;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">    <span class="keyword">if</span> (b &lt; a) <span class="built_in">swap</span>(a, b);</span><br><span class="line">    <span class="keyword">if</span> (c &lt; a) <span class="built_in">swap</span>(a, c);</span><br><span class="line">    <span class="keyword">if</span> (c &lt; b) <span class="built_in">swap</span>(b, c);</span><br><span class="line">    cout &lt;&lt; a &lt;&lt; <span class="string">&#x27; &#x27;</span>&lt;&lt; b &lt;&lt; <span class="string">&#x27; &#x27;</span> &lt;&lt; c &lt;&lt;<span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>三角形面积</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iomanip&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="type">double</span> a,b,c,p;</span><br><span class="line">    cin &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">    p = (a+b+c)/<span class="number">2</span>;</span><br><span class="line">    cout &lt;&lt; fixed &lt;&lt; <span class="built_in">setprecision</span>(<span class="number">1</span>);</span><br><span class="line">    </span><br><span class="line">    cout &lt;&lt; <span class="built_in">sqrt</span>(p * (p-a) * (p-b) * (p-c)) &lt;&lt; <span class="string">&#x27;\n&#x27;</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>栈<ul>
+<li>一种先进后出的线性数据结构<ul>
+<li>栈顶-&gt;进栈</li>
+<li>栈底-&gt;出栈</li>
+</ul>
+</li>
+<li>C++中用一个数组和一个变量（记录栈顶位置）来实现栈结构</li>
+<li>栈的应用<ul>
+<li></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>队列</li>
+<li>链表和邻接表</li>
+<li>Hash</li>
+<li>字符串</li>
+<li>Trie</li>
+<li>二叉堆</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/11/IoTlearning/day1/" data-id="cl5gxpb2m0004ewuhdkyc53f9" data-title="C++" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-IoTlearning/digital logic" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/09/IoTlearning/digital%20logic/" class="article-date">
@@ -409,7 +506,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/09/IoTlearning/digital%20logic/" data-id="cl5f4kyy5000138uhfu5s7zub" data-title="DigitalLogic" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/09/IoTlearning/digital%20logic/" data-id="cl5gxpb2e0001ewuhddbx60nx" data-title="DigitalLogic" class="article-share-link">Share</a>
       
       
       
@@ -431,12 +528,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/07/IoTlearning/week1/">线性表</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <hr>
-<p>title: 线性表</p>
-<hr>
-<h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h3><ul>
+        <h3 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h3><ul>
 <li><p>最大子序列问题的具体实现</p>
 <ul>
 <li><p>算法1：时间复杂度$O（n^3）$</p>
@@ -454,7 +558,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/07/IoTlearning/week1/" data-id="cl5f4kyy9000238uh0r9kdck2" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/07/IoTlearning/week1/" data-id="cl5gxpb2k0003ewuh4o001fah" data-title="线性表" class="article-share-link">Share</a>
       
       
       
@@ -515,7 +619,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/06/coding/%E8%BF%94%E5%9B%9E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" data-id="cl5f4kyyc000338uh1xbi5nnh" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/06/coding/%E8%BF%94%E5%9B%9E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E9%97%AE%E9%A2%98/" data-id="cl5gxpb2p0006ewuh2c1033qd" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -537,32 +641,42 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/02/IoTlearning/first/">数据结构基本概念</a>
+    </h1>
+  
+
+      </header>
+    
     <div class="e-content article-entry" itemprop="articleBody">
       
         <ul>
 <li><h3 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h3><ul>
 <li><em>数据</em> ： 能被计算机识别并能输入计算机中被处理的符号集合<br>  （data ）换句话说，<strong>数据就是计算机化的信息</strong>。</li>
-<li><em>数据元素</em> ：组成数据的有一定意义的基本单位，<br> （data element）在计算机中通常作为整体考虑和处理，<strong>不再分割</strong>。</li>
-<li><em>数据对象</em>：具有相同性质的数据元素的集合，是数据的一个子集。<br>（data object）**数据对象可以是有限的，也可以是无限的。</li>
+<li><em>数据元素</em> ：组成数据的有一定意义的基本单位，<br>   （data element）在计算机中通常作为整体考虑和处理，<strong>不再分割</strong>。</li>
+<li><em>数据对象</em>：具有相同性质的数据元素的集合，是数据的一个子集。<br>  （data object）**数据对象可以是有限的，也可以是无限的。</li>
 <li><em>数据结构</em> ：是指相互之间存在的一种或多种特定关系的<strong>数据元素集合</strong> ，<br> （data structure)   是带有结构的数据元素结合，<strong>它是指数据的组织形式</strong></li>
-<li><em>数据类型</em> ：是用来刻画一组性质相同的<strong>数据</strong>及<strong>其上的操作</strong>的总称。<br> （data type）定义了两个集合：<br> 　<strong>数据类型的取值范围</strong>和 <strong>该类型中可允许 的一组运算</strong> 。<br> 　* <em>数据类型<strong>分类</strong></em>：<strong>原子类型</strong> 和 <strong>结构类型</strong><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//C语言中，</span><br><span class="line">//标准类型包括整型、实型和字符型</span><br><span class="line">//结构类型是可以再分解的</span><br><span class="line">tydef struct</span><br><span class="line">&#123;</span><br><span class="line">	int no;</span><br><span class="line">	char name[20];</span><br><span class="line">	int age;</span><br><span class="line">	float score;</span><br><span class="line">&#125;STUDENT;                            //结构体类型名</span><br><span class="line">STUDENT stu,*p;                     //stu是结构体类型变量</span><br><span class="line">                          //p 为指向结构体类型STUDENT 的指针变量</span><br></pre></td></tr></table></figure></li>
+<li><em>数据类型</em> ：是用来刻画一组性质相同的<strong>数据</strong>及<strong>其上的操作</strong>的总称。<br> （data type）定义了两个集合：<br>　<strong>数据类型的取值范围</strong>和 <strong>该类型中可允许 的一组运算</strong> 。<br> 　* <em>数据类型<strong>分类</strong></em>：<strong>原子类型</strong> 和 <strong>结构类型</strong></li>
 </ul>
 </li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">//C语言中，</span><br><span class="line">//标准类型包括整型、实型和字符型</span><br><span class="line">//结构类型是可以再分解的</span><br><span class="line">tydef struct</span><br><span class="line">&#123;</span><br><span class="line">	int no;</span><br><span class="line">	char name[20];</span><br><span class="line">	int age;</span><br><span class="line">	float score;</span><br><span class="line">&#125;STUDENT;                            //结构体类型名</span><br><span class="line">STUDENT stu,*p;                     //stu是结构体类型变量</span><br><span class="line">                          //p 为指向结构体类型STUDENT 的指针变量</span><br></pre></td></tr></table></figure>
+
+<ul>
 <li><h3 id="抽象数据类型"><a href="#抽象数据类型" class="headerlink" title="抽象数据类型"></a>抽象数据类型</h3><ul>
 <li><em>抽象数据类型</em> ：对具有某种逻辑关系的<strong>数据类型进行描述</strong>，并在该类型上（abstract data type)进行的一组<strong>操作</strong><br>它定义了<strong>数据对象</strong>、<strong>数据对象各元素之间</strong> 的关系</li>
 </ul>
 </li>
-<li><p>描述的是<strong>一组逻辑上的特性</strong> ，与在<strong>计算机内部表示无关</strong>。</p>
-<ul>
+<li>描述的是<strong>一组逻辑上的特性</strong> ，与在<strong>计算机内部表示无关</strong>。<ul>
 <li>例如：整数数据类型是一个抽象数据类型，不同的处理器可能实现方法不同，但其逻辑特性相同，即加、减、乘、除等运算是一致的。</li>
 </ul>
 </li>
-<li><p>*通常是用户定义且用以表示应用问题的数据模型，<br> 通常由<strong>基本的数据类型</strong>组成，并包括一系列<strong>相关服务操作</strong>。</p>
-</li>
-<li><p>是大型软件构造的模块化方法。使用 线性表、栈、队列、串、树、图 等抽象数据类型可以安全、快速、方便地设计功能的大型软件。</p>
-</li>
-<li><p><em>抽象数据类型</em> ：对象的数据类型。它定义了<strong>数据对象</strong>、数据对象<strong>各数据元素之间的关系</strong>及对数据元素的<strong>操作</strong>。</p>
-<ul>
+<li>*通常是用户定义且用以表示应用问题的数据模型，<br> 通常由<strong>基本的数据类型</strong>组成，并包括一系列<strong>相关服务操作</strong>。</li>
+<li>是大型软件构造的模块化方法。使用 线性表、栈、队列、串、树、图 等抽象数据类型可以安全、快速、方便地设计功能的大型软件。</li>
+<li><em>抽象数据类型</em> ：对象的数据类型。它定义了<strong>数据对象</strong>、数据对象<strong>各数据元素之间的关系</strong>及对数据元素的<strong>操作</strong>。<ul>
 <li>通常指用户定义的解决应用问题的数据模型，<ul>
 <li>包括<strong>数据的定义和操作</strong></li>
 </ul>
@@ -576,8 +690,7 @@
 </li>
 </ul>
 </li>
-<li><p><em><strong>抽象数据类型的描述</strong></em></p>
-<ul>
+<li><em><strong>抽象数据类型的描述</strong></em><ul>
 <li><em>用一个三元组来表示</em><ul>
 <li>ADT（D，S，P）</li>
 <li>D：数据对象集合</li>
@@ -592,6 +705,7 @@
 </ul>
 <p> &#x2F;&#x2F;线性表的抽象数据类型描述<br> ADT List<br> {<br>     数据对象: D &#x3D; {$a_i$  | $a_i$$\in$ Elemset, i &#x3D; 1,2,…,n, n $\geq$ 0}<br>     数据关系：R &#x3D; {&lt;$a_{i-1}$ ,$a_i$&gt;| $a_{i-1}$, $a_i$  $\in$  D , i &#x3D; 2, 3,…,n}<br>     基本操作：<br>     InitList(&amp;L)<br>         初始条件：表L不存在<br>         操作结果：构造一个空的线性表<br>    ClearList(&amp;L)<br>         初始条件：表L已经存在<br>         操作结果： 表L被置为空<br>    ListLength(L)<br>         初始条件： 表L已经存在<br>         操作结果： 返回线性表L的元素个数<br>         …<br>}ADT List</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">C语言参数传递：</span><br><span class="line">	值传递：仅将数值传给形参</span><br><span class="line">	引用传递：把实参的地址传给形参，实参和形参共用同一块内存区域，修改形参的值 </span><br><span class="line">            其实就是修改实参的值，可返回结果</span><br></pre></td></tr></table></figure>
+
 <ul>
 <li><h3 id="数据的逻辑结构和存储结构"><a href="#数据的逻辑结构和存储结构" class="headerlink" title="数据的逻辑结构和存储结构"></a>数据的逻辑结构和存储结构</h3><ul>
 <li><em>逻辑结构</em><ul>
@@ -678,7 +792,7 @@
 <li>图的有关运算，n为图中顶点的个数</li>
 </ul>
 </li>
-<li> for (i &#x3D; 0; i &lt; n; i++)                       n<br>  for (j &#x3D; 0; j &lt; n; j++)                   $n^2$<br>  {<br>  a[i][j] &#x3D; 0;                                      $n^2$<br>  for (k &#x3D; 0; k &lt; n; k++)             $n^3$<br>  a[i][j] &#x3D; a[i][k] * a[k][j];                          $n^3$<br>  }<br>则总执行次数为f(n) &#x3D; n + $n^2$ + $n^2$ + $n^3$ + $n^3$ &#x3D; 2$n^3$ + 2$n^2$ + n<br>与 $n^3$ 同阶</li>
+<li>   for (i &#x3D; 0; i &lt; n; i++)                       n<br>for (j &#x3D; 0; j &lt; n; j++)                   $n^2$<br>{<br>a[i][j] &#x3D; 0;                                      $n^2$<br>for (k &#x3D; 0; k &lt; n; k++)             $n^3$<br>  a[i][j] &#x3D; a[i][k] * a[k][j];                          $n^3$<br>}<br>则总执行次数为f(n) &#x3D; n + $n^2$ + $n^2$ + $n^3$ + $n^3$ &#x3D; 2$n^3$ + 2$n^2$ + n<br>与 $n^3$ 同阶</li>
 </ul>
 </li>
 </ul>
@@ -715,7 +829,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/02/IoTlearning/first/" data-id="cl5f4kyyd000438uh5qydbysl" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/02/IoTlearning/first/" data-id="cl5gxpb2i0002ewuh4g9wanhf" data-title="数据结构基本概念" class="article-share-link">Share</a>
       
       
       
@@ -766,7 +880,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5f4kyy0000038uhhi7d1pv7" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5gxpb230000ewuh3z4b4oar" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -800,7 +914,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5f4kyye000538uh995reif2" data-title="" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5gxpb2n0005ewuh845rc6m6" data-title="" class="article-share-link">Share</a>
       
       
       
@@ -843,11 +957,15 @@
       <ul>
         
           <li>
+            <a href="/2022/07/11/IoTlearning/day1/">C++</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/09/IoTlearning/digital%20logic/">DigitalLogic</a>
           </li>
         
           <li>
-            <a href="/2022/07/07/IoTlearning/week1/">(no title)</a>
+            <a href="/2022/07/07/IoTlearning/week1/">线性表</a>
           </li>
         
           <li>
@@ -855,11 +973,7 @@
           </li>
         
           <li>
-            <a href="/2022/07/02/IoTlearning/first/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2022/06/27/hello-world/">Hello World</a>
+            <a href="/2022/07/02/IoTlearning/first/">数据结构基本概念</a>
           </li>
         
       </ul>
