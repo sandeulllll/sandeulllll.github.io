@@ -73,67 +73,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-coding/加快读入数据的速度" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%AB%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E7%9A%84%E9%80%9F%E5%BA%A6/" class="article-date">
-  <time class="dt-published" datetime="2022-07-11T16:44:56.634Z" itemprop="datePublished">2022-07-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>局部变量的作用域只在函数内部，在函数返回后，局部变量的内存已经释放了。<br>如果函数返回的是局部变量的值，不涉及地址，程序不会出错。<br>如果返回的是局部变量的地址(指针)的话，程序运行后会出错。因为函数只是把指针复制后返回了，但是指针指向的内容已经被释放了，这样指针指向的内容就是不可预料的内容，调用就会出错。准确的来说，函数不能通过返回指向栈内存的指针(注意这里指的是栈，返回指向堆内存的指针是可以的)。</p>
-<ul>
-<li>返回局部自动变量<ul>
-<li>存储在栈中</li>
-<li>函数返回时自动复制一份变量的copy 给调用者</li>
-</ul>
-</li>
-<li>局部静态变量<ul>
-<li>存储在静态存储区</li>
-<li>从初始化一直有效到程序结束</li>
-<li>仅分配一次内存</li>
-<li>函数返回后变量不会销毁</li>
-</ul>
-</li>
-<li>返回静态的局部变量的地址<ul>
-<li>没有问题</li>
-<li>静态变量的生命周期是整个程序运行时间</li>
-</ul>
-</li>
-<li>返回局部变量的指针<ul>
-<li>会出错</li>
-<li>栈里的变量在超过七作用域或函数返回后就销毁了，不存在了</li>
-</ul>
-</li>
-<li>返回指向常量的字符串指针<ul>
-<li>存储在常量存储区</li>
-<li>（不是静态存储区）</li>
-<li>函数返回一个指向常量的指针 </li>
-<li>但返回一个局部字符串的指针不可行</li>
-</ul>
-</li>
-<li><h2 id="如果返回的是一个局部变量的地址，该局部变量一定要声明为static类型"><a href="#如果返回的是一个局部变量的地址，该局部变量一定要声明为static类型" class="headerlink" title="如果返回的是一个局部变量的地址，该局部变量一定要声明为static类型"></a>如果返回的是一个局部变量的地址，该局部变量一定要声明为static类型</h2></li>
-</ul>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/12/coding/%E5%8A%A0%E5%BF%AB%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E7%9A%84%E9%80%9F%E5%BA%A6/" data-id="cl5gzbw200006j4uh72pt4xc8" data-title="" class="article-share-link">Share</a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
     <article id="post-coding/加快C++读入数据速度" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" class="article-date">
@@ -169,7 +108,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" data-id="cl5gzbw1z0005j4uhhhn71bk4" data-title="加快cin读入数据速度" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" data-id="cl5gzkn0m0004n4uh75yzg1et" data-title="加快cin读入数据速度" class="article-share-link">Share</a>
       
       
       
@@ -266,7 +205,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/11/IoTlearning/day1/" data-id="cl5gzbw1u0001j4uh103kcooj" data-title="C++" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/11/IoTlearning/day1/" data-id="cl5gzkn050000n4uhe43dhk1y" data-title="C++" class="article-share-link">Share</a>
       
       
       
@@ -614,7 +553,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/09/IoTlearning/digital%20logic/" data-id="cl5gzbw1x0002j4uhchjr9vsv" data-title="DigitalLogic" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/09/IoTlearning/digital%20logic/" data-id="cl5gzkn0j0002n4uhg8kb8a3j" data-title="DigitalLogic" class="article-share-link">Share</a>
       
       
       
@@ -666,7 +605,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/07/IoTlearning/week1/" data-id="cl5gzbw1y0004j4uh1b48efl8" data-title="线性表" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/07/IoTlearning/week1/" data-id="cl5gzkn0l0003n4uher1ydawg" data-title="线性表" class="article-share-link">Share</a>
       
       
       
@@ -737,7 +676,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/06/coding/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/" data-id="cl5gzbw210007j4uhhxy6awl2" data-title="局部变量" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/06/coding/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/" data-id="cl5gzkn0p0007n4uhgkl3a7zu" data-title="局部变量" class="article-share-link">Share</a>
       
       
       
@@ -947,7 +886,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/02/IoTlearning/first/" data-id="cl5gzbw1y0003j4uhd6iseca3" data-title="数据结构基本概念" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/02/IoTlearning/first/" data-id="cl5gzkn0o0006n4uhhn2tdyri" data-title="数据结构基本概念" class="article-share-link">Share</a>
       
       
       
@@ -998,7 +937,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5gzbw1o0000j4uh2rtk6a3r" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5gzkn0f0001n4uh4n17gxij" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -1042,7 +981,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5gzbw220008j4uhg8t32d2p" data-title="双指针遍历" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5gzkn0n0005n4uh29ge60rn" data-title="双指针遍历" class="article-share-link">Share</a>
       
       
       
@@ -1085,10 +1024,6 @@
       <ul>
         
           <li>
-            <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%AB%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E7%9A%84%E9%80%9F%E5%BA%A6/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/">加快cin读入数据速度</a>
           </li>
         
@@ -1102,6 +1037,10 @@
         
           <li>
             <a href="/2022/07/07/IoTlearning/week1/">线性表</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/06/coding/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/">局部变量</a>
           </li>
         
       </ul>
