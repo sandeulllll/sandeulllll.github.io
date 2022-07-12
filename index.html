@@ -73,6 +73,59 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-IoTlearning/day2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/12/IoTlearning/day2/" class="article-date">
+  <time class="dt-published" datetime="2022-07-12T00:40:31.396Z" itemprop="datePublished">2022-07-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2022/07/12/IoTlearning/day2/">基本算法</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ol>
+<li>算法时间复杂度衡量<ol>
+<li>时间复杂度是操作次数</li>
+<li>只考虑数量级</li>
+<li>时间复杂度在2000以下，一般可以认为1s内能跑出来</li>
+</ol>
+</li>
+<li>模运算</li>
+<li>乘法逆元</li>
+<li>位运算</li>
+</ol>
+<h5 id="贪心（入门）"><a href="#贪心（入门）" class="headerlink" title="贪心（入门）"></a>贪心（入门）</h5><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">const</span> <span class="type">int</span> MAX=<span class="number">1e6</span>+<span class="number">5</span>;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> T,n,ans,a[MAX];</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios_base::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>);cin.<span class="built_in">tie</span>(<span class="number">0</span>);cout.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin&gt;&gt;T;</span><br><span class="line">	<span class="keyword">while</span>(T--&gt;<span class="number">0</span>)&#123;</span><br><span class="line">		ans=<span class="number">0</span>;</span><br><span class="line">		cin&gt;&gt;n;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			cin&gt;&gt;a[i];</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)&#123;</span><br><span class="line">			ans=<span class="built_in">max</span>(ans,a[i<span class="number">-1</span>]*a[i]);</span><br><span class="line">		&#125;</span><br><span class="line">		cout&lt;&lt;ans&lt;&lt;<span class="string">&quot;\n&quot;</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="斐波那契数列（矩阵快速幂）"><a href="#斐波那契数列（矩阵快速幂）" class="headerlink" title="斐波那契数列（矩阵快速幂）"></a>斐波那契数列（矩阵快速幂）</h5><figure class="highlight cc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstdio&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cstring&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;cmath&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MOD 1000000007</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX 10</span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> ll long long</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">yl</span><span class="comment">//矩阵 </span></span><br><span class="line">&#123;</span><br><span class="line">       <span class="type">int</span> n;<span class="comment">//大小</span></span><br><span class="line">       <span class="type">long</span> <span class="type">long</span> g[MAX][MAX];  </span><br><span class="line">&#125;;</span><br><span class="line">yl <span class="keyword">operator</span> *(yl a,yl b)<span class="comment">//定义乘法 </span></span><br><span class="line">&#123;</span><br><span class="line">       <span class="type">int</span> n=a.n;</span><br><span class="line">       yl cool;</span><br><span class="line">       <span class="built_in">memset</span>(cool.g,<span class="number">0</span>,<span class="built_in">sizeof</span>(cool.g));</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">            <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</span><br><span class="line">                 <span class="keyword">for</span>(<span class="type">int</span> k=<span class="number">1</span>;k&lt;=n;++k)</span><br><span class="line">                        cool.g[i][j]=(cool.g[i][j]+<span class="number">1ll</span>*a.g[i][k]*b.g[k][j]%MOD)%MOD;</span><br><span class="line">       cool.n=n;</span><br><span class="line">       <span class="keyword">return</span> cool;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">write</span><span class="params">(yl a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">       <span class="type">int</span> n=a.n;</span><br><span class="line">       <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">1</span>;i&lt;=n;++i)</span><br><span class="line">       &#123;</span><br><span class="line">           <span class="keyword">for</span>(<span class="type">int</span> j=<span class="number">1</span>;j&lt;=n;++j)</span><br><span class="line">              cout&lt;&lt;a.g[i][j]&lt;&lt;<span class="string">&#x27; &#x27;</span>;</span><br><span class="line">           cout&lt;&lt;endl;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">yl <span class="title">Pow</span><span class="params">(yl a,<span class="type">long</span> <span class="type">long</span> b)</span><span class="comment">//a的b次方</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">       <span class="keyword">if</span>(b==<span class="number">1</span>)<span class="keyword">return</span> a;</span><br><span class="line">       yl s=<span class="built_in">Pow</span>(a,b/<span class="number">2</span>);</span><br><span class="line">       s.n=a.n;</span><br><span class="line">       s=s*s;</span><br><span class="line">       <span class="keyword">if</span>(b&amp;<span class="number">1</span>)s=s*a;</span><br><span class="line">       <span class="keyword">return</span> s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">       ll n;</span><br><span class="line">       cin&gt;&gt;n;</span><br><span class="line">       <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">       &#123;</span><br><span class="line">              cout&lt;&lt;<span class="number">0</span>&lt;&lt;endl;</span><br><span class="line">              <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">       <span class="keyword">if</span>(n==<span class="number">1</span>||n==<span class="number">2</span>)</span><br><span class="line">       &#123;</span><br><span class="line">              cout&lt;&lt;<span class="number">1</span>&lt;&lt;endl;</span><br><span class="line">              <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       &#125; </span><br><span class="line">       <span class="keyword">else</span></span><br><span class="line">       &#123;</span><br><span class="line">              yl a;</span><br><span class="line">              a.n=<span class="number">2</span>;</span><br><span class="line">              a.g[<span class="number">1</span>][<span class="number">1</span>]=a.g[<span class="number">1</span>][<span class="number">2</span>]=a.g[<span class="number">2</span>][<span class="number">1</span>]=<span class="number">1</span>;</span><br><span class="line">              a.g[<span class="number">2</span>][<span class="number">2</span>]=<span class="number">0</span>;</span><br><span class="line">              yl s=<span class="built_in">Pow</span>(a,n<span class="number">-1</span>);</span><br><span class="line">              s.n=<span class="number">2</span>;</span><br><span class="line">              <span class="comment">//write(s);</span></span><br><span class="line">              cout&lt;&lt;s.g[<span class="number">1</span>][<span class="number">1</span>]&lt;&lt;endl;</span><br><span class="line">              <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">       &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/12/IoTlearning/day2/" data-id="cl5i2bkbv000470uh24mfcw0y" data-title="基本算法" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-coding/加快C++读入数据速度" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" class="article-date">
@@ -108,7 +161,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" data-id="cl5gzn80n0005qcuh2d2d2k5o" data-title="加快cin读入数据速度" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/" data-id="cl5i2bkbs000170uheonjc54z" data-title="加快cin读入数据速度" class="article-share-link">Share</a>
       
       
       
@@ -205,7 +258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/11/IoTlearning/day1/" data-id="cl5gzn80i0001qcuh4sulaol5" data-title="C++" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/11/IoTlearning/day1/" data-id="cl5i2bkbu000270uh578v9z0y" data-title="C++" class="article-share-link">Share</a>
       
       
       
@@ -553,7 +606,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/09/IoTlearning/digital%20logic/" data-id="cl5gzn80l0003qcuh7x5t9apl" data-title="DigitalLogic" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/09/IoTlearning/digital%20logic/" data-id="cl5i2bkbv000570uh0sr5811b" data-title="DigitalLogic" class="article-share-link">Share</a>
       
       
       
@@ -605,7 +658,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/07/IoTlearning/week1/" data-id="cl5gzn80m0004qcuh6eyge8gj" data-title="线性表" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/07/IoTlearning/week1/" data-id="cl5i2bkbw000670uh527x7ess" data-title="线性表" class="article-share-link">Share</a>
       
       
       
@@ -676,7 +729,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/06/coding/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/" data-id="cl5gzn80o0007qcuh5lzc0fl0" data-title="局部变量" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/06/coding/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/" data-id="cl5i2bkbx000870uh6usy6tg7" data-title="局部变量" class="article-share-link">Share</a>
       
       
       
@@ -886,7 +939,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/07/02/IoTlearning/first/" data-id="cl5gzn80k0002qcuh2kl31aq4" data-title="数据结构基本概念" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/07/02/IoTlearning/first/" data-id="cl5i2bkbw000770uh8d6zcdhs" data-title="数据结构基本概念" class="article-share-link">Share</a>
       
       
       
@@ -937,7 +990,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5gzn80d0000qcuh5z2yd71r" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/27/hello-world/" data-id="cl5i2bkbi000070uhg5muflkd" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -981,7 +1034,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5gzn80o0006qcuhaz7o4rqv" data-title="双指针遍历" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/06/19/coding/%E5%8F%8C%E6%8C%87%E9%92%88/" data-id="cl5i2bkbu000370uh3u2eh5of" data-title="双指针遍历" class="article-share-link">Share</a>
       
       
       
@@ -1024,6 +1077,10 @@
       <ul>
         
           <li>
+            <a href="/2022/07/12/IoTlearning/day2/">基本算法</a>
+          </li>
+        
+          <li>
             <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/">加快cin读入数据速度</a>
           </li>
         
@@ -1037,10 +1094,6 @@
         
           <li>
             <a href="/2022/07/07/IoTlearning/week1/">线性表</a>
-          </li>
-        
-          <li>
-            <a href="/2022/07/06/coding/%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F/">局部变量</a>
           </li>
         
       </ul>
