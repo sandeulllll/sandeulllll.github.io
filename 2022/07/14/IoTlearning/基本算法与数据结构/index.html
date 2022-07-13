@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="基本算法位运算递推与递归前缀与差分二分 用于在单调序列或单调函数中进行查找  通过二分把求解转换为判定 三分法 解决单峰函数的极值问题等等     注意终止边界、左右取舍时的开闭情况  避免 漏掉答案 或 造成死循环 实数域上的二分需要注意精度问题   正数集合上的二分  保证最终答案处于闭区间［ｌ，ｒ］内  循环以ｌ＝ｒ结束  每次二分的中间值 mid 会归属于左半段与右半段二者之一  在单调递">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2022/07/14/IoTlearning/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="基本算法位运算递推与递归前缀与差分二分 用于在单调序列或单调函数中进行查找  通过二分把求解转换为判定 三分法 解决单峰函数的极值问题等等     注意终止边界、左右取舍时的开闭情况  避免 漏掉答案 或 造成死循环 实数域上的二分需要注意精度问题   正数集合上的二分  保证最终答案处于闭区间［ｌ，ｒ］内  循环以ｌ＝ｒ结束  每次二分的中间值 mid 会归属于左半段与右半段二者之一  在单调递">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-07-13T17:47:32.903Z">
+<meta property="article:modified_time" content="2022-07-13T17:47:06.975Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-IoTlearning/基本算法与数据结构" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/07/14/IoTlearning/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" class="article-date">
+  <time class="dt-published" datetime="2022-07-13T17:47:32.903Z" itemprop="datePublished">2022-07-14</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="基本算法"><a href="#基本算法" class="headerlink" title="基本算法"></a>基本算法</h3><h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><h4 id="递推与递归"><a href="#递推与递归" class="headerlink" title="递推与递归"></a>递推与递归</h4><h4 id="前缀与差分"><a href="#前缀与差分" class="headerlink" title="前缀与差分"></a>前缀与差分</h4><h4 id="二分"><a href="#二分" class="headerlink" title="二分"></a>二分</h4><ul>
+<li><p>用于在单调序列或单调函数中进行查找</p>
+<ul>
+<li>通过二分把求解转换为判定</li>
+<li>三分法<ul>
+<li>解决单峰函数的极值问题等等</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>注意终止边界、左右取舍时的开闭情况</p>
+<ul>
+<li>避免 漏掉答案 或 造成死循环</li>
+<li>实数域上的二分需要注意精度问题</li>
+</ul>
+</li>
+<li><p>正数集合上的二分</p>
+<ul>
+<li><p>保证最终答案处于闭区间［ｌ，ｒ］内</p>
+</li>
+<li><p>循环以ｌ＝ｒ结束</p>
+</li>
+<li><p>每次二分的中间值 mid 会归属于左半段与右半段二者之一</p>
+<ul>
+<li><p><em><strong>在单调递增序列a中查找 &gt;&#x3D;x 的数中最小的一个</strong></em></p>
+</li>
+<li><pre><code class="c++">while(l&lt;r)&#123;
+    int mid = (l+r) &gt;&gt; 1;  //右移一位也就是除以2
+    if (a[mid] &gt;= x) 
+        r = mid;
+    else 
+        l = mid + 1;
+&#125;
+return a[l];
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">* ******</span><br><span class="line"></span><br><span class="line">  ***在单调递增序列a中查找 &lt;=x 的数中最大的一个***</span><br><span class="line"></span><br><span class="line">* ```CC</span><br><span class="line">  while (l &lt; r)&#123;</span><br><span class="line">  	int mid = (l + r + 1) &gt;&gt; 1;</span><br><span class="line">      if (a[mid] &lt;= x)</span><br><span class="line">          l = mid;</span><br><span class="line">      else</span><br><span class="line">          r = mid -1;</span><br><span class="line">  &#125;</span><br><span class="line">  return a[l];</span><br></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>二分流程</p>
+<ul>
+<li>分析具体问题，确定左右半段哪一个是可行区间，以及mid归属哪一段</li>
+<li>选择两个形式之一</li>
+<li>二分终止条件是 l &#x3D; r ,该值就是答案所在位置</li>
+</ul>
+</li>
+<li><p>C++ STL 中的 lower_bound 与 upper_bound 函数实现了在一个序列中二分查找某个正数x的后继</p>
+</li>
+</ul>
+</li>
+<li><p>实数域上的二分</p>
+<ul>
+<li><p>确定所需的精度 eps</p>
+</li>
+<li><p>以 l + eps &lt; r 为循环条件</p>
+</li>
+<li><p>每次根据在mid 上的判定选择 r &#x3D; mid 或 l &#x3D; mid 分支之一</p>
+</li>
+<li><p>一般需要保留k位小数时， 取eps &#x3D; $10^{-(k+2)}$ </p>
+</li>
+<li><pre><code class="c++">while (1 + 1e-5 &lt; r)&#123;
+    double mid = (l + r) / 2;
+    if (calc(mid))
+        r = mid;
+    else
+        l = mid;
+&#125;
+</code></pre>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h4><h4 id="倍增"><a href="#倍增" class="headerlink" title="倍增"></a>倍增</h4><h4 id="贪心"><a href="#贪心" class="headerlink" title="贪心"></a>贪心</h4><h3 id="基本数据结构"><a href="#基本数据结构" class="headerlink" title="基本数据结构"></a>基本数据结构</h3><h4 id="栈"><a href="#栈" class="headerlink" title="栈"></a>栈</h4><h4 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h4><h4 id="链表与邻接表"><a href="#链表与邻接表" class="headerlink" title="链表与邻接表"></a>链表与邻接表</h4><h4 id="Hash"><a href="#Hash" class="headerlink" title="Hash"></a>Hash</h4><h4 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h4><h4 id="Trie"><a href="#Trie" class="headerlink" title="Trie"></a>Trie</h4><h4 id="二叉堆"><a href="#二叉堆" class="headerlink" title="二叉堆"></a>二叉堆</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/07/14/IoTlearning/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" data-id="cl5jwb61j00060kuhhlfiajhl" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2022/07/14/coding/%E5%89%8D%E7%BC%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">day3</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/07/">July 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/06/">June 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/07/14/IoTlearning/%E5%9F%BA%E6%9C%AC%E7%AE%97%E6%B3%95%E4%B8%8E%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/14/coding/%E5%89%8D%E7%BC%80/">day3</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/13/coding/day3/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/12/IoTlearning/day2/">基本算法</a>
+          </li>
+        
+          <li>
+            <a href="/2022/07/12/coding/%E5%8A%A0%E5%BF%ABC++%E8%AF%BB%E5%85%A5%E6%95%B0%E6%8D%AE%E9%80%9F%E5%BA%A6/">加快cin读入数据速度</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
