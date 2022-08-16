@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-08-16T10:13:48.196Z</updated>
+  <updated>2022-08-16T10:18:53.645Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>数据结构与算法</title>
+    <title>List 排序和去重用法</title>
     <link href="http://example.com/2022/08/16/%E9%93%BE%E8%A1%A8List%20%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8E%BB%E9%87%8D/"/>
     <id>http://example.com/2022/08/16/%E9%93%BE%E8%A1%A8List%20%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8E%BB%E9%87%8D/</id>
     <published>2022-08-16T10:03:52.778Z</published>
-    <updated>2022-08-16T10:13:48.196Z</updated>
+    <updated>2022-08-16T10:18:53.645Z</updated>
     
     <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line">list&lt;string&gt;q;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">string s;</span><br><span class="line">cin &gt;&gt; s;</span><br><span class="line">q.<span class="built_in">push_front</span>(s);</span><br><span class="line">&#125;</span><br><span class="line">q.<span class="built_in">sort</span>();</span><br><span class="line">q.<span class="built_in">unique</span>();</span><br><span class="line">cout &lt;&lt; q.<span class="built_in">size</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
