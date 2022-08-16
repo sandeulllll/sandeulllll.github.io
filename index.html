@@ -71,6 +71,60 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Dijkstra算法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/08/16/Dijkstra%E7%AE%97%E6%B3%95/" class="article-date">
+  <time class="dt-published" datetime="2022-08-16T06:40:31.092Z" itemprop="datePublished">2022-08-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>int dist[N]; &#x2F;&#x2F;dist[i]表示到顶点vi的路径长度<ul>
+<li>如果有边 dist[i] &#x3D; 边的weight</li>
+<li>else dist[i] 设置为无穷大</li>
+</ul>
+</li>
+<li>T ：保持已经找到了最短路径的顶点的集合</li>
+<li>数组dist[]用来保存源点到各个顶点的距离</li>
+<li>数组T[]用来保存已经找到了最短路径的顶点的集合</li>
+<li>初始化<ul>
+<li>原点s的weight赋值0<ul>
+<li>dis[s] &#x3D; 0;</li>
+</ul>
+</li>
+<li>点s能直接到达的边（s,m)<ul>
+<li>dis[m] &#x3D; w(s,m)</li>
+</ul>
+</li>
+<li>s不能直接到达的顶点设置为无穷大</li>
+<li>集合T初始时只有顶点s</li>
+</ul>
+</li>
+<li>从dis数组中取最小值就是最短路径</li>
+<li>把该点加入到T中就完成了一个顶点</li>
+<li></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/08/16/Dijkstra%E7%AE%97%E6%B3%95/" data-id="cl6vtg7qx0000pouh8pqge6de" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2022/08/16/hello-world/" class="article-date">
@@ -110,7 +164,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/08/16/hello-world/" data-id="cl6vt3ghm0000ucuhe5t98bl7" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/08/16/hello-world/" data-id="cl6vtg7r20001pouh3bnn87mw" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
@@ -151,6 +205,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2022/08/16/Dijkstra%E7%AE%97%E6%B3%95/">(no title)</a>
+          </li>
         
           <li>
             <a href="/2022/08/16/hello-world/">Hello World</a>
