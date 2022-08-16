@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title></title>
+      <link href="/2022/08/16/%E5%9B%BE/"/>
+      <url>/2022/08/16/%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<p>（acm下周才教图，这个是看陈越老师的PPT并结合了我自己找的一个比较好理解的网课（但他讲的好像又太简单了<del>但是符合我的理解水平，之前在笔记里狂贴代码是因为只有代码能勉强看懂，不是因为在学算法啦（也可能是因为在学算法，我以为需要学数据结构就是为了提高效率</del>）是$mycodeschool$那个数据结构课qwq（有中文字幕^^））</p><h2 id="数学逻辑模型"><a href="#数学逻辑模型" class="headerlink" title="数学逻辑模型"></a>数学逻辑模型</h2><ul><li>离散里更详细（稍后整理上来）<ul><li><del>或者碰到不懂的再去翻离散？</del></li><li>顶点集和边集构成的有序对</li></ul></li></ul><h2 id="物理实现"><a href="#物理实现" class="headerlink" title="物理实现"></a>物理实现</h2><h4 id="创建两个列表"><a href="#创建两个列表" class="headerlink" title="创建两个列表"></a>创建两个列表</h4><ul><li>一个存放所有顶点，一个存放所有边<ul><li>每个列表可以用数组实现<ul><li>把边定义为一个结构体或类<ul><li>包含两个域<ul><li>起始顶点</li><li>终止顶点</li><li>(很明显就不敲了qwq其实是因为忘记这个对齐的线在哪儿关了敲出来看起来很乱)</li><li>C语言可以用字符数组（指针引用）</li><li>C++有string类型</li><li>无向图起始点和终止点任意</li><li>有向图要作区分</li></ul></li></ul></li><li>赋权图<ul><li>再增加一个域来存储权重</li></ul></li></ul></li></ul></li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">E</span>&#123;</span><br><span class="line"><span class="type">int</span> * stV;</span><br><span class="line"><span class="type">int</span> *endV;</span><br><span class="line"><span class="type">int</span> weight;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>顶点列表的空间复杂度是$O(V)$<ul><li>$V$是集合V的大小（元素数量）qaq稍后把绝对值符号加上</li></ul></li><li>边列表的域中不直接保存值而是保存 引用——消耗相等的内存<ul><li>空间复杂度$O(E)$</li></ul></li><li>总的空间复杂度$O(V+E)$</li><li>空间复杂度最优，但时间复杂度不够高效（查找时是线性查找）</li></ul><h4 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h4><ul><li>大小为$V * V$ 的矩阵</li><li>边数可能是顶点数的平方</li><li>qwq好像就是离散里的邻接矩阵</li><li>注意有向图要区分起点终点</li><li><strong>无向图</strong>的矩阵是<strong>对称</strong>的<ul><li>只需要遍历一半</li></ul></li><li>行数和列数表示顶点编号</li><li>找到某个结点的所有相邻结点<ul><li>首先扫描结点列表找到对应编号<ul><li>已经给出就直接遍历对应行</li><li>结点用一维数组存储</li><li><strong>可以避免遍历结点列表</strong><ul><li>使用额外的内存来创建一个哈希表</li></ul></li></ul></li><li>扫描对应行找到所有的邻接结点<ul><li>$O(V)$</li></ul></li></ul></li><li>有权图的存储<ul><li>不存在的边的权重值可以设为很大的数（永不期望的权重值）</li></ul></li><li>邻接矩阵的评价<ul><li>时间复杂度<ul><li>找出所有邻接结点达到$O(V)$</li><li>判断两个结点是否相连达到$O(1)$</li></ul></li><li>空间复杂度<ul><li>和边列表的存储方式相比</li><li>内存单元的使用不再刚好等于边的数量<ul><li>（假设用vector,当然也可以定义一个合理大小的数组或者使用动态内存分配，但是动态内存分配要记得$free$太麻烦辽qwq）</li></ul></li><li>邻接矩阵存储边的空间复杂度是$O(n^2)$<ul><li>也存储了结点没有连接的情况即不存在的边<ul><li>如果边很稀疏的话就很浪费内存啦</li><li>顶点数很大的图一般比较稀疏</li><li>邻接矩阵适用于稠密图—–边数接近于顶点数的平方</li></ul></li><li>空间利用率不够高效</li></ul></li></ul></li></ul></li></ul><h4 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h4><ul><li>存储连接的结点<ul><li>推断出没有连接的结点</li><li>不保存未连接的结点信息</li><li>qwq其实就是去掉0的情况，每一行的内存大小不一样了</li><li>可以创建一个指针数组来实现<ul><li>数组大小是顶点数</li><li>每个指针指向一个一维数组（大小不同）</li></ul></li><li>优点：消耗的空间更少—–$O(E)$<ul><li>可能不会给之前的集合符号加绝对值符号了，我自己意会指的是集合元素数量就行叭$qwq$<del>好麻烦</del></li></ul></li><li>判断两个结点是否相连—–需要遍历起点行<ul><li>时间复杂度O(v)<ul><li>如果保持每一行都是有序—–可以使用二分查找<ul><li>但是保持有序需要更新数据（又是时间开销qwq）</li></ul></li></ul></li><li>尽管时间度没有比邻接矩阵更优化但是<ul><li>现实世界里的图大多是稀疏的—–每一行的一维数组的大小可能会远远小于V</li></ul></li></ul></li></ul></li><li>评价：对于稀疏图—–既节省空间也节省时间</li><li>加入一条新的边<ul><li>逻辑结构上的操作—–在对于行的末位加上数据</li><li>物理实现上不能直接加（假如是用数组）<strong>如果用链表就是邻接表啦</strong><ul><li>可以新建一个数组</li><li>将原数组的拷贝到新数组并写入新的值</li><li>将数组删除</li></ul></li><li><strong>链表</strong>  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N = 随便什么数^^</span><br><span class="line"><span class="keyword">struct</span>&#123;</span><br><span class="line"><span class="type">int</span> data;                 <span class="comment">//存储数据的域</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span>* next;        <span class="comment">//用来存放下一个结点的地址即结点指针</span></span><br><span class="line"><span class="comment">//int weight;             假如是有权图</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span>*A[N];</span><br></pre></td></tr></table></figure></li></ul></li><li>有权图<ul><li>增加一个域来存放权重</li></ul></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title></title>
+      <link href="/2022/08/16/Dijkstra/"/>
+      <url>/2022/08/16/Dijkstra/</url>
+      
+        <content type="html"><![CDATA[<ul><li>int dist[N]; &#x2F;&#x2F;dist[i]表示到顶点vi的路径长度<ul><li>如果有边 dist[i] &#x3D; 边的weight</li><li>else dist[i] 设置为无穷大</li></ul></li><li>T ：保持已经找到了最短路径的顶点的集合</li><li>数组dist[]用来保存源点到各个顶点的距离</li><li>数组T[]用来保存已经找到了最短路径的顶点的集合</li><li>初始化<ul><li>原点s的weight赋值0<ul><li>dis[s] &#x3D; 0;</li></ul></li><li>点s能直接到达的边（s,m)<ul><li>dis[m] &#x3D; w(s,m)</li></ul></li><li>s不能直接到达的顶点设置为无穷大</li><li>集合T初始时只有顶点s</li></ul></li><li>从dis数组中取最小值就是最短路径</li><li>把该点加入到T中就完成了一个顶点</li><li></li></ul>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2022/08/16/hello-world/"/>
+      <url>/2022/08/16/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+  
+  
+</search>
