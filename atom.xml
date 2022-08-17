@@ -170,4 +170,33 @@
     
   </entry>
   
+  <entry>
+    <title>hexo 主题更换</title>
+    <link href="http://example.com/2022/08/16/Hexo%E6%8D%A2%E4%B8%BB%E9%A2%98/"/>
+    <id>http://example.com/2022/08/16/Hexo%E6%8D%A2%E4%B8%BB%E9%A2%98/</id>
+    <published>2022-08-15T16:00:00.000Z</published>
+    <updated>2022-08-17T06:44:06.197Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>浏览寻找喜欢的主题</li><li><code>git clone </code> + <code>主题网址 </code>下载到本地<ul><li>是在在博客根目录下打开cmd下载</li></ul></li><li>修改站点配置文件<ul><li><code>_config.yml</code>里找到主题并更改保存</li><li>是博客根目录下的配置文件不是主题里的</li></ul></li><li>在博客根目录下打开git bash，<ul><li><code>hexo clean</code></li><li><code>hexo g</code></li><li><code>hexo s</code></li><li><code>crtl + C</code> 退出本地预览</li><li><code>hexo d</code> <ul><li>在弹出的窗口里输入<ul><li>github 账号和令牌</li></ul></li></ul></li></ul></li></ul>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;ul&gt;
+&lt;li&gt;浏览寻找喜欢的主题&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git clone &lt;/code&gt; + &lt;code&gt;主题网址 &lt;/code&gt;下载到本地&lt;ul&gt;
+&lt;li&gt;是在在博客根目录下打开cmd下载&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;修改站点配置文件&lt;ul&gt;
+&lt;li</summary>
+      
+    
+    
+    
+    
+    <category term="hexo" scheme="http://example.com/tags/hexo/"/>
+    
+  </entry>
+  
 </feed>

@@ -135,6 +135,25 @@
     </entry>
     
     
+    
+    <entry>
+      <title>hexo 主题更换</title>
+      <link href="/2022/08/16/Hexo%E6%8D%A2%E4%B8%BB%E9%A2%98/"/>
+      <url>/2022/08/16/Hexo%E6%8D%A2%E4%B8%BB%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<ul><li>浏览寻找喜欢的主题</li><li><code>git clone </code> + <code>主题网址 </code>下载到本地<ul><li>是在在博客根目录下打开cmd下载</li></ul></li><li>修改站点配置文件<ul><li><code>_config.yml</code>里找到主题并更改保存</li><li>是博客根目录下的配置文件不是主题里的</li></ul></li><li>在博客根目录下打开git bash，<ul><li><code>hexo clean</code></li><li><code>hexo g</code></li><li><code>hexo s</code></li><li><code>crtl + C</code> 退出本地预览</li><li><code>hexo d</code> <ul><li>在弹出的窗口里输入<ul><li>github 账号和令牌</li></ul></li></ul></li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>
