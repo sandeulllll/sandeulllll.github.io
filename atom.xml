@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-09-22T08:56:14.985Z</updated>
+  <updated>2022-07-06T02:42:37.481Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,70 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2022/09/22/%E6%8E%92%E5%BA%8F/"/>
-    <id>http://example.com/2022/09/22/%E6%8E%92%E5%BA%8F/</id>
-    <published>2022-09-22T08:56:14.985Z</published>
-    <updated>2022-09-22T08:56:14.985Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h3><ul><li>关键字是什么</li><li>排序的形式化描述？？？</li><li>内部排序、外部排序</li><li>内部排序的算法<ul><li>排序规则<ul><li>插入</li><li>交换（快速排序）</li><li>选择排序</li><li>归并排序</li><li>基数排序</li></ul></li><li>时间复杂度<ul><li>简单<ul><li>选择排序</li><li>插入排序</li><li>起泡排序</li></ul></li><li>先进 </li><li>基数排序</li></ul></li><li>稳定性<ul><li>稳定排序</li><li>不稳定排序</li></ul></li></ul></li><li>待排序记录在内存中<ul><li>顺序排序<ul><li>直接移动记录</li></ul></li><li>链表排序<ul><li>只移动指针</li></ul></li><li>&#x3D;&#x3D;地址排序&#x3D;&#x3D;<ul><li>先移动地址，最后再移动记录</li><li>可以增设一维数组来专门存放记录的地址</li></ul></li></ul></li><li>内部排序的过程是一个逐步扩大记录的有序序列长度的过程</li><li>一趟选择排序的算法<ul><li>整个选择排序</li><li>时间性能分析</li></ul></li><li>插入排序</li><li>冒泡排序</li><li>快速排序<ul><li></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;排序&quot;&gt;&lt;a href=&quot;#排序&quot; class=&quot;headerlink&quot; title=&quot;排序&quot;&gt;&lt;/a&gt;排序&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;关键字是什么&lt;/li&gt;
-&lt;li&gt;排序的形式化描述？？？&lt;/li&gt;
-&lt;li&gt;内部排序、外部排序&lt;/li&gt;
-&lt;li&gt;内部排序的算法&lt;</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title></title>
-    <link href="http://example.com/2022/09/21/%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF/"/>
-    <id>http://example.com/2022/09/21/%E6%97%B6%E5%BA%8F%E7%94%B5%E8%B7%AF/</id>
-    <published>2022-09-21T07:59:49.832Z</published>
-    <updated>2022-09-21T07:59:49.833Z</updated>
-    
-    <content type="html"><![CDATA[<h5 id="时序电路"><a href="#时序电路" class="headerlink" title="时序电路"></a>时序电路</h5><h6 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h6><ul><li>记忆 0 和 1 （保持）</li><li>置 0，置1</li></ul><h6 id="基本器件"><a href="#基本器件" class="headerlink" title="基本器件"></a>基本器件</h6><ul><li>锁存器<ul><li>脉冲电平</li></ul></li><li>触发器<ul><li>脉冲边缘</li></ul></li></ul><h6 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h6><ul><li>特性表 <ul><li>器件手册</li></ul></li><li>特性方程<ul><li>现态、次态</li><li>限制条件</li></ul></li><li>波形图<ul><li>所有逻辑电路都有延迟</li><li>可以根据特性表画出时序图再画出有时延的时序图</li></ul></li><li>状态图</li></ul><h5 id="基本SR锁存器"><a href="#基本SR锁存器" class="headerlink" title="基本SR锁存器"></a>基本SR锁存器</h5><ul><li>逻辑门控SR<ul><li>在基础上加一个E电路</li></ul></li><li>路基门控D锁存器<ul><li>为了解决限制条件$RS &#x3D; 0$ (或非条件)</li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h5 id=&quot;时序电路&quot;&gt;&lt;a href=&quot;#时序电路&quot; class=&quot;headerlink&quot; title=&quot;时序电路&quot;&gt;&lt;/a&gt;时序电路&lt;/h5&gt;&lt;h6 id=&quot;特点&quot;&gt;&lt;a href=&quot;#特点&quot; class=&quot;headerlink&quot; title=&quot;特点&quot;&gt;&lt;/a&gt;特点&lt;/h</summary>
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Verilog</title>
-    <link href="http://example.com/2022/09/18/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/"/>
-    <id>http://example.com/2022/09/18/%E6%95%B0%E5%AD%97%E9%80%BB%E8%BE%91/</id>
-    <published>2022-09-18T03:25:50.777Z</published>
-    <updated>2022-09-23T17:42:58.619Z</updated>
-    
-    <content type="html"><![CDATA[<h3 id="verilog"><a href="#verilog" class="headerlink" title="verilog"></a>verilog</h3><h5 id="1-简介"><a href="#1-简介" class="headerlink" title="1.简介"></a>1.简介</h5><ul><li><p>怎么用来进行电路简化和建模？</p></li><li><p>特性：</p><ul><li>三种方式建模：<ul><li>过程化结构</li><li>连续赋值语句</li><li>门和模块例化语句  （？）</li></ul></li><li>数据类型<ul><li>wire<ul><li>物理元件之间的连线</li></ul></li><li>reg<ul><li>抽象的数据存储元件</li></ul></li><li>可以层级设计</li><li>&#x3D;&#x3D;原语&#x3D;&#x3D;是什么？</li><li>支持其他编程语言接口 <ul><li>允许外部函数访问模块内部信息</li><li>因此测试方法更加丰富（怎么测试）</li><li>模拟激励是什么？如何生成指定测试的约束条件？</li><li>设计逻辑功能时可以不用关心工艺、温度等因素</li></ul></li></ul></li><li>ASIC <ul><li>专用集成电路<ul><li>具有专门用途和特殊功能的独立集成电路器件</li></ul></li></ul></li><li>应用<ul><li>生成ASIC<ul><li>途径<ul><li>可编程逻辑器件<ul><li>主流器件：FPGA、CPLD</li></ul></li><li>半定制或全定制ASIC<ul><li>利用Verilog来设计具有某种特殊功能的专用芯片<ul><li>根据工艺分类<ul><li>门阵列ASIC</li><li>标准单元ASIC</li><li>全定制ASIC</li></ul></li></ul></li></ul></li><li>混合ASIC<ul><li>具有面向用户的FPGA可编程逻辑功能和逻辑资源，同时含有可方便调用和配置的硬件标准单元模块，CPU,&#x3D;&#x3D;锁相环&#x3D;&#x3D;是什么，乘法器</li></ul></li></ul></li></ul></li></ul></li></ul></li><li><p>环境搭建</p><ul><li>仿真是什么？</li><li>Quartus II</li><li>Modelsim</li></ul></li><li><p>设计方法</p><ul><li>需求分析</li><li>功能划分</li><li>文本描述</li><li>前仿真（没有考虑信号延迟等）</li><li>逻辑综合<ul><li>产生物理电路门级结构</li><li>将建模转化为门级列表</li></ul></li><li>对门级电路进行布局布线</li><li>后仿真</li></ul><h5 id="2-基本语法"><a href="#2-基本语法" class="headerlink" title="2.基本语法"></a>2.基本语法</h5><h6 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h6><ul><li>标识符 <ul><li>字母、数字、美元符号、下划线</li></ul></li><li>关键字全部是小写</li><li>数值逻辑<ul><li>0</li><li>1</li><li>X <ul><li>实际电路里，信号可能为1，也可能为0</li></ul></li><li>Z<ul><li>表示&#x3D;&#x3D;高阻&#x3D;&#x3D;<ul><li>例如信号没有驱动时的逻辑结果</li></ul></li></ul></li></ul></li></ul><h6 id="2-2"><a href="#2-2" class="headerlink" title="2.2"></a>2.2</h6><ul><li><p>整数数值</p><ul><li><code>&#39;d</code> 十进制</li><li><code>&#39;b</code> 二进制</li><li><code>&#39;o</code> 八进制</li><li><code>&#39;h</code> 十六进制</li><li>指明位宽</li><li>负数 <ul><li>在指明位宽的数字前面加上一个减号</li></ul></li></ul></li><li><p>实数</p><ul><li><p>十进制</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">30</span><span class="variable">.123</span></span><br><span class="line"><span class="number">6</span><span class="variable">.0</span></span><br><span class="line"><span class="number">0</span><span class="variable">.001</span></span><br></pre></td></tr></table></figure></li><li><p>科学计数法</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.2e4     //表示12000</span><br><span class="line">1_0001e4  //表示100010000，下划线是为了便于阅读</span><br><span class="line">1E-3      //表示0.001 </span><br></pre></td></tr></table></figure></li></ul></li><li><p>字符串</p><ul><li>用双引号包起来的字符序列</li><li>不能多行书写，也就是字符串中不能包含回车符</li><li>$Verilog$ 把字符串当作一系列的单字节ASCII 字符队列<ul><li>存储字符串”<a href="http://www.runoob.com&quot;需要14/">www.runoob.com&quot;需要14</a> * 8 bit 的存储单元</li></ul></li></ul></li></ul></li></ul><h6 id="2-3"><a href="#2-3" class="headerlink" title="2.3"></a>2.3</h6><ul><li><p>基本数据类型</p><ul><li>wire</li><li>reg</li></ul></li><li><p>线网</p><ul><li>硬件单元之间的物理连线</li><li>与其连接的器件输出端连续驱动</li><li>如果没有驱动元件连接到wire型 变量，则缺省值一般为Z</li></ul></li><li><p>寄存器</p><ul><li><p>表示存储单元</p></li><li><p>会保存原有的值，直到被改写</p></li><li><p>声明</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> clk_temp;</span><br><span class="line"><span class="keyword">reg</span> flag1,flag2;</span><br><span class="line"><span class="comment">//和C语言的变量声明一样</span></span><br></pre></td></tr></table></figure></li><li><p>不需要驱动源，也不一定需要时钟信号</p></li><li><p>仿真时可以在任意时刻通过赋值操作进行改写</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> rstn;</span><br><span class="line"><span class="keyword">initial</span> <span class="keyword">begin</span></span><br><span class="line">    rstn = <span class="number">1&#x27;b0</span>;</span><br><span class="line">    #<span class="number">100</span>;</span><br></pre></td></tr></table></figure><h6 id="向量"><a href="#向量" class="headerlink" title="向量"></a>向量</h6><ul><li><p>位宽大于1时</p></li><li><p>wire&#x2F;reg 可声明为向量的形式</p><figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">reg</span> [<span class="number">3</span>:<span class="number">0</span>] counter;  <span class="comment">//声明四位宽的寄存器</span></span><br><span class="line"><span class="keyword">wire</span> [<span class="number">32</span>-<span class="number">1</span>:<span class="number">0</span>] gpio_data; <span class="comment">//32bit</span></span><br><span class="line"><span class="keyword">wire</span> [<span class="number">8</span>:<span class="number">2</span>] addr;    <span class="comment">//7bit</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li><li><p>整数、实数、时间</p><ul><li>都属于寄存器类型</li></ul></li><li><p>整数</p><ul><li>关键字<ul><li>integer</li></ul></li><li>位宽与编译器有关，一搬为32bit</li><li>integer 型变量为有符号数</li></ul></li><li><p>实数</p><ul><li>关键字<ul><li>real</li></ul></li><li>声明不能带有范围，默认值为0</li><li>如果赋值给一个整数<ul><li>只有实数的整数部分会赋给整数</li></ul></li></ul></li><li><p>时间</p><ul><li>关键字<ul><li>time</li></ul></li><li>用于对仿真时间进行保存</li><li>宽度一般为64 bit</li><li>调用系统函数$time 获取当前仿真时间</li></ul></li><li><p>数组</p></li><li><p>存储器</p><ul><li>一种寄存器数组</li><li>可以描述RAM 或ROM的行为</li></ul></li><li><p>参数</p><ul><li>表示常量</li><li>关键字<ul><li>parameter</li></ul></li><li>只能赋值一次</li><li>可以通过实例化改变参数在模块中的值</li></ul></li><li><p>局部参数</p><ul><li>声明关键字<ul><li>localparam<ul><li>参数只在本模块中调用时</li></ul></li></ul></li></ul></li><li><p>字符串</p><ul><li>保存在reg型变量中</li><li>每个字符占一个字节（8bit）<ul><li>寄存器变量的宽度应该足够大以保证不会溢出</li></ul></li><li>if 寄存器变量的宽度大于字符串的大小<ul><li>使用0来填充&#x3D;&#x3D;左边&#x3D;&#x3D;的空余位</li></ul></li><li>if 寄存器变量的宽度小于字符串大小<ul><li>&#x3D;&#x3D;截去字符串左边多余的数字&#x3D;&#x3D;</li></ul></li></ul></li><li><p>转义字符</p></li><li><p>可以使用string 关键字来定义字符串类型</p></li><li><p>表达式</p><ul><li>操作符<ul><li>算术</li><li>关系</li><li>等价</li><li>逻辑</li><li>按位</li><li>&#x3D;&#x3D;归约&#x3D;&#x3D;</li><li>移位<ul><li>算术</li><li>逻辑</li></ul></li><li>&#x3D;&#x3D;拼接&#x3D;&#x3D;</li><li>&#x3D;&#x3D;条件操作符&#x3D;&#x3D;</li></ul></li><li>操作数<ul><li>任意数据类型</li></ul></li></ul></li><li><p>编译指令</p><ul><li>&#96;define 类似于 C里的#define</li><li>&#96;undef <ul><li>取消之前的宏定义</li></ul></li><li>&#96;elsif </li><li>&#96;else</li><li>&#96;ifdef</li><li>&#96;endif </li><li>&#96;include 类似 C里的 #include </li><li>&#96;timescale <ul><li>将时间单位与实际时间相关联</li></ul></li><li>&#96;default_nettype<ul><li>没有被声明的连线定义为线网类型</li></ul></li><li>&#96;resetall</li><li>&#96;celldefine</li><li>&#96;endcelldefine</li><li>&#96;unconnected_drive</li><li>&#96;nounconnected_drive</li></ul></li></ul><h6 id="x3D-x3D-3-1-x3D-x3D"><a href="#x3D-x3D-3-1-x3D-x3D" class="headerlink" title="&#x3D;&#x3D;3.1&#x3D;&#x3D;"></a>&#x3D;&#x3D;3.1&#x3D;&#x3D;</h6><ul><li><p>连续赋值</p><ul><li>用于对wire型变量赋值</li><li>关键词    assign<ul><li>任何已经声明wire变量的赋值语句都是以<strong>assign</strong>开头</li></ul></li></ul></li></ul></li><li><p>时延</p><ul><li></li></ul></li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h3 id=&quot;verilog&quot;&gt;&lt;a href=&quot;#verilog&quot; class=&quot;headerlink&quot; title=&quot;verilog&quot;&gt;&lt;/a&gt;verilog&lt;/h3&gt;&lt;h5 id=&quot;1-简介&quot;&gt;&lt;a href=&quot;#1-简介&quot; class=&quot;headerlink&quot; titl</summary>
-      
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title></title>
@@ -215,28 +151,6 @@
   </entry>
   
   <entry>
-    <title>List 排序和去重用法</title>
-    <link href="http://example.com/2022/08/16/%E9%93%BE%E8%A1%A8List%20%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8E%BB%E9%87%8D/"/>
-    <id>http://example.com/2022/08/16/%E9%93%BE%E8%A1%A8List%20%E6%8E%92%E5%BA%8F%E5%92%8C%E5%8E%BB%E9%87%8D/</id>
-    <published>2022-08-16T10:03:52.778Z</published>
-    <updated>2022-08-16T10:18:53.645Z</updated>
-    
-    <content type="html"><![CDATA[<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"> </span><br><span class="line">list&lt;string&gt;q;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line"><span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">string s;</span><br><span class="line">cin &gt;&gt; s;</span><br><span class="line">q.<span class="built_in">push_front</span>(s);</span><br><span class="line">&#125;</span><br><span class="line">q.<span class="built_in">sort</span>();</span><br><span class="line">q.<span class="built_in">unique</span>();</span><br><span class="line">cout &lt;&lt; q.<span class="built_in">size</span>();</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;figure class=&quot;highlight cpp&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;</summary>
-      
-    
-    
-    
-    
-    <category term="STL" scheme="http://example.com/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
     <title>快读和快速输出</title>
     <link href="http://example.com/2022/08/16/%E5%BF%AB%E8%AF%BB%E5%92%8C%E5%BF%AB%E9%80%9F%E8%BE%93%E5%87%BA/"/>
     <id>http://example.com/2022/08/16/%E5%BF%AB%E8%AF%BB%E5%92%8C%E5%BF%AB%E9%80%9F%E8%BE%93%E5%87%BA/</id>
@@ -343,28 +257,6 @@
     
     
     <category term="STL" scheme="http://example.com/tags/STL/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>图论</title>
-    <link href="http://example.com/2022/08/16/%E5%9B%BE/"/>
-    <id>http://example.com/2022/08/16/%E5%9B%BE/</id>
-    <published>2022-08-16T08:25:35.663Z</published>
-    <updated>2022-08-16T09:59:08.860Z</updated>
-    
-    <content type="html"><![CDATA[<p>（acm下周才教图，这个是看陈越老师的PPT并结合了我自己找的一个比较好理解的网课（但他讲的好像又太简单了<del>但是符合我的理解水平，之前在笔记里狂贴代码是因为只有代码能勉强看懂，不是因为在学算法啦（也可能是因为在学算法，我以为需要学数据结构就是为了提高效率</del>）是$mycodeschool$那个数据结构课qwq（有中文字幕^^））</p><h2 id="数学逻辑模型"><a href="#数学逻辑模型" class="headerlink" title="数学逻辑模型"></a>数学逻辑模型</h2><ul><li>离散里更详细（稍后整理上来）<ul><li><del>或者碰到不懂的再去翻离散？</del></li><li>顶点集和边集构成的有序对</li></ul></li></ul><h2 id="物理实现"><a href="#物理实现" class="headerlink" title="物理实现"></a>物理实现</h2><h4 id="创建两个列表"><a href="#创建两个列表" class="headerlink" title="创建两个列表"></a>创建两个列表</h4><ul><li>一个存放所有顶点，一个存放所有边<ul><li>每个列表可以用数组实现<ul><li>把边定义为一个结构体或类<ul><li>包含两个域<ul><li>起始顶点</li><li>终止顶点</li><li>(很明显就不敲了qwq其实是因为忘记这个对齐的线在哪儿关了敲出来看起来很乱)</li><li>C语言可以用字符数组（指针引用）</li><li>C++有string类型</li><li>无向图起始点和终止点任意</li><li>有向图要作区分</li></ul></li></ul></li><li>赋权图<ul><li>再增加一个域来存储权重</li></ul></li></ul></li></ul></li></ul><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> <span class="title class_">E</span>&#123;</span><br><span class="line"><span class="type">int</span> * stV;</span><br><span class="line"><span class="type">int</span> *endV;</span><br><span class="line"><span class="type">int</span> weight;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><ul><li>顶点列表的空间复杂度是$O(V)$<ul><li>$V$是集合V的大小（元素数量）qaq稍后把绝对值符号加上</li></ul></li><li>边列表的域中不直接保存值而是保存 引用——消耗相等的内存<ul><li>空间复杂度$O(E)$</li></ul></li><li>总的空间复杂度$O(V+E)$</li><li>空间复杂度最优，但时间复杂度不够高效（查找时是线性查找）</li></ul><h4 id="邻接矩阵"><a href="#邻接矩阵" class="headerlink" title="邻接矩阵"></a>邻接矩阵</h4><ul><li>大小为$V * V$ 的矩阵</li><li>边数可能是顶点数的平方</li><li>qwq好像就是离散里的邻接矩阵</li><li>注意有向图要区分起点终点</li><li><strong>无向图</strong>的矩阵是<strong>对称</strong>的<ul><li>只需要遍历一半</li></ul></li><li>行数和列数表示顶点编号</li><li>找到某个结点的所有相邻结点<ul><li>首先扫描结点列表找到对应编号<ul><li>已经给出就直接遍历对应行</li><li>结点用一维数组存储</li><li><strong>可以避免遍历结点列表</strong><ul><li>使用额外的内存来创建一个哈希表</li></ul></li></ul></li><li>扫描对应行找到所有的邻接结点<ul><li>$O(V)$</li></ul></li></ul></li><li>有权图的存储<ul><li>不存在的边的权重值可以设为很大的数（永不期望的权重值）</li></ul></li><li>邻接矩阵的评价<ul><li>时间复杂度<ul><li>找出所有邻接结点达到$O(V)$</li><li>判断两个结点是否相连达到$O(1)$</li></ul></li><li>空间复杂度<ul><li>和边列表的存储方式相比</li><li>内存单元的使用不再刚好等于边的数量<ul><li>（假设用vector,当然也可以定义一个合理大小的数组或者使用动态内存分配，但是动态内存分配要记得$free$太麻烦辽qwq）</li></ul></li><li>邻接矩阵存储边的空间复杂度是$O(n^2)$<ul><li>也存储了结点没有连接的情况即不存在的边<ul><li>如果边很稀疏的话就很浪费内存啦</li><li>顶点数很大的图一般比较稀疏</li><li>邻接矩阵适用于稠密图—–边数接近于顶点数的平方</li></ul></li><li>空间利用率不够高效</li></ul></li></ul></li></ul></li></ul><h4 id="邻接表"><a href="#邻接表" class="headerlink" title="邻接表"></a>邻接表</h4><ul><li>存储连接的结点<ul><li>推断出没有连接的结点</li><li>不保存未连接的结点信息</li><li>qwq其实就是去掉0的情况，每一行的内存大小不一样了</li><li>可以创建一个指针数组来实现<ul><li>数组大小是顶点数</li><li>每个指针指向一个一维数组（大小不同）</li></ul></li><li>优点：消耗的空间更少—–$O(E)$<ul><li>可能不会给之前的集合符号加绝对值符号了，我自己意会指的是集合元素数量就行叭$qwq$<del>好麻烦</del></li></ul></li><li>判断两个结点是否相连—–需要遍历起点行<ul><li>时间复杂度O(v)<ul><li>如果保持每一行都是有序—–可以使用二分查找<ul><li>但是保持有序需要更新数据（又是时间开销qwq）</li></ul></li></ul></li><li>尽管时间度没有比邻接矩阵更优化但是<ul><li>现实世界里的图大多是稀疏的—–每一行的一维数组的大小可能会远远小于V</li></ul></li></ul></li></ul></li><li>评价：对于稀疏图—–既节省空间也节省时间</li><li>加入一条新的边<ul><li>逻辑结构上的操作—–在对于行的末位加上数据</li><li>物理实现上不能直接加（假如是用数组）<strong>如果用链表就是邻接表啦</strong><ul><li>可以新建一个数组</li><li>将原数组的拷贝到新数组并写入新的值</li><li>将数组删除</li></ul></li><li><strong>链表</strong>  <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">const</span> <span class="type">int</span> N = 随便什么数^^</span><br><span class="line"><span class="keyword">struct</span>&#123;</span><br><span class="line"><span class="type">int</span> data;                 <span class="comment">//存储数据的域</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span>* next;        <span class="comment">//用来存放下一个结点的地址即结点指针</span></span><br><span class="line"><span class="comment">//int weight;             假如是有权图</span></span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">Node</span>*A[N];</span><br></pre></td></tr></table></figure></li></ul></li><li>有权图<ul><li>增加一个域来存放权重</li></ul></li></ul>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;（acm下周才教图，这个是看陈越老师的PPT并结合了我自己找的一个比较好理解的网课（但他讲的好像又太简单了&lt;del&gt;但是符合我的理解水平，之前在笔记里狂贴代码是因为只有代码能勉强看懂，不是因为在学算法啦（也可能是因为在学算法，我以为需要学数据结构就是为了提高效率&lt;/del&gt;</summary>
-      
-    
-    
-    
-    
-    <category term="数据结构与算法" scheme="http://example.com/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/"/>
     
   </entry>
   
