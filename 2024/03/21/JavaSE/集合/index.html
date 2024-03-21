@@ -16,22 +16,22 @@
   <meta name="author" content="p&#39;y">
   <meta name="keywords" content="">
   
-    <meta name="description" content="思路：代码：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010">
+    <meta name="description" content="集合">
 <meta property="og:type" content="article">
-<meta property="og:title" content="中缀表达式转后缀">
-<meta property="og:url" content="http://example.com/2024/03/02/%E4%B8%AD%E7%BC%80%E8%A1%A8%E8%BE%BE%E5%BC%8F%E8%BD%AC%E5%90%8E%E7%BC%80/index.html">
+<meta property="og:title" content="集合">
+<meta property="og:url" content="http://example.com/2024/03/21/JavaSE/%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="思路：代码：12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758596061626364656667686970717273747576777879808182838485868788899091929394959697989910010">
+<meta property="og:description" content="集合">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2024-03-01T17:13:44.000Z">
-<meta property="article:modified_time" content="2024-03-01T17:14:37.643Z">
+<meta property="article:published_time" content="2024-03-21T03:50:21.000Z">
+<meta property="article:modified_time" content="2024-03-21T03:51:27.670Z">
 <meta property="article:author" content="p&#39;y">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>中缀表达式转后缀 - Hexo</title>
+  <title>集合 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="中缀表达式转后缀"></span>
+            <span id="subtitle" data-typed-text="集合"></span>
           
         </div>
 
@@ -208,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-02 01:13" pubdate>
-          March 2, 2024 am
+        <time datetime="2024-03-21 11:50" pubdate>
+          March 21, 2024 am
         </time>
       </span>
     
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          446 words
+          2 words
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          4 mins
+          1 mins
         
       </span>
     
@@ -268,14 +268,12 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">中缀表达式转后缀</h1>
+            <h1 id="seo-header">集合</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h2><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">package</span> stack;<br><br><span class="hljs-keyword">import</span> java.util.ArrayList;<br><span class="hljs-keyword">import</span> java.util.List;<br><span class="hljs-keyword">import</span> java.util.Stack;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">PolandNotationDemo</span> &#123;<br>    <span class="hljs-comment">//中缀转后缀</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">expression</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;1+((2+3)*4)-5&quot;</span>;<br><span class="hljs-comment">//      -&gt;123+4*+5-</span><br>        List&lt;String&gt; infix = toInfixExpressionList(expression);<br>        System.out.println(infix);<br>        List&lt;String&gt; parse = parseSuffixExpressionList(infix);<br>        System.out.println(parse);<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;String&gt; <span class="hljs-title function_">toInfixExpressionList</span><span class="hljs-params">(String s)</span> &#123;<br>        List&lt;String&gt; ls = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        String str;<br>        <span class="hljs-type">char</span> c;<br>        <span class="hljs-keyword">do</span> &#123;<br>            <span class="hljs-keyword">if</span>((c=s.charAt(i)) &lt; <span class="hljs-number">48</span> || (c=s.charAt(i)) &gt; <span class="hljs-number">57</span>) &#123;<br>                ls.add(<span class="hljs-string">&quot;&quot;</span>+c);<br>                i++;<br>            &#125;<br>            <span class="hljs-keyword">else</span> &#123;<br>                str = <span class="hljs-string">&quot;&quot;</span>;<br>                <span class="hljs-keyword">while</span> (i &lt; s.length() &amp;&amp; (c=s.charAt(i)) &gt;= <span class="hljs-number">48</span> &amp;&amp; (c=s.charAt(i)) &lt;= <span class="hljs-number">57</span>) &#123;<br>                    str += c;<br>                    i++;<br>                &#125;<br>                ls.add(str);<br>            &#125;<br>        &#125;<span class="hljs-keyword">while</span> (i &lt; s.length());<br>        <span class="hljs-keyword">return</span> ls;<br>    &#125;<br><span class="hljs-comment">//1+((2+3)*4)-5  ==&gt;  123+4*+5-</span><br>    <span class="hljs-comment">/*</span><br><span class="hljs-comment">    1. 如果是数字，直接入s2</span><br><span class="hljs-comment">    2. 如果是符号：</span><br><span class="hljs-comment">        1. 如果s1为空：直接入s1</span><br><span class="hljs-comment">        2. 若s1不为空：</span><br><span class="hljs-comment">            1.</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> List&lt;String&gt; <span class="hljs-title function_">parseSuffixExpressionList</span><span class="hljs-params">(List&lt;String&gt; ls)</span>&#123;<br>        <span class="hljs-comment">//定义两个栈</span><br>        Stack&lt;String&gt; s1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Stack</span>&lt;&gt;();<br>        <span class="hljs-comment">//由于s2这个栈在整个转换的过程中没有pop操作，而且如果采用栈结构，后续还需要逆序输出（比较麻烦），因此直接用List</span><br>        List&lt;String&gt; s2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br><br>        <span class="hljs-comment">//遍历ls</span><br>        <span class="hljs-keyword">for</span>(String item: ls) &#123;<br>            <span class="hljs-keyword">if</span>(item.matches(<span class="hljs-string">&quot;\\d+&quot;</span>)) &#123;<br>                s2.add(item);<br>            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(item.equals(<span class="hljs-string">&quot;(&quot;</span>)) &#123;<br>                s1.push(item);<br>            &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(item.equals(<span class="hljs-string">&quot;)&quot;</span>)) &#123;<br>                <span class="hljs-keyword">while</span> (!s1.peek().equals(<span class="hljs-string">&quot;(&quot;</span>)) &#123;<br>                    s2.add(s1.pop());<br>                &#125;<br>                s1.pop(); <span class="hljs-comment">//消除小括号</span><br>            &#125; <span class="hljs-keyword">else</span> &#123;<br>                <span class="hljs-keyword">while</span> (s1.size() != <span class="hljs-number">0</span> &amp;&amp; Operation.getValue(s1.peek()) &gt;= Operation.getValue(item)) &#123;<br>                    s2.add(s1.pop());<br>                &#125;<br>                s1.push(item);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">while</span> (s1.size() != <span class="hljs-number">0</span>) &#123;<br>            s2.add(s1.pop());<br>        &#125;<br>        <span class="hljs-keyword">return</span> s2;<br>    &#125;<br><br><br>&#125;<br><br><span class="hljs-comment">//编写一个类，返回运算符对应的优先级</span><br><span class="hljs-keyword">class</span> <span class="hljs-title class_">Operation</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">ADD</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">SUB</span> <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">MUL</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-variable">DIV</span> <span class="hljs-operator">=</span> <span class="hljs-number">2</span>;<br><br>    <span class="hljs-comment">//写一个方法返回对应的优先级数字</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getValue</span><span class="hljs-params">(String operation)</span> &#123;<br>        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">switch</span> (operation) &#123;<br>            <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;+&quot;</span>:<br>                result = ADD;<br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;-&quot;</span>:<br>                result = SUB;<br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;*&quot;</span>:<br>                result = MUL;<br>                <span class="hljs-keyword">break</span>;<br>            <span class="hljs-keyword">case</span> <span class="hljs-string">&quot;/&quot;</span>:<br>                result = DIV;<br>            <span class="hljs-keyword">default</span>:<br>                System.out.println(<span class="hljs-string">&quot;不存在该运算符&quot;</span>);<br>                <span class="hljs-keyword">break</span>;<br>        &#125;<br>        <span class="hljs-keyword">return</span> result;<br>    &#125;<br>&#125;<br><br></code></pre></td></tr></table></figure>
-
-
+                <h2 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h2>
                 
               </div>
             
@@ -293,7 +291,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="category-chain-item">数据结构与算法</a>
+  <a href="/categories/JavaSE/" class="category-chain-item">JavaSE</a>
   
   
 
@@ -320,8 +318,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>中缀表达式转后缀</div>
-      <div>http://example.com/2024/03/02/中缀表达式转后缀/</div>
+      <div>集合</div>
+      <div>http://example.com/2024/03/21/JavaSE/集合/</div>
     </div>
     <div class="license-meta">
       
@@ -333,7 +331,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 2, 2024</div>
+          <div>March 21, 2024</div>
         </div>
       
       
@@ -365,18 +363,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/06/JZ73-%E7%BF%BB%E8%BD%AC%E5%8D%95%E8%AF%8D%E5%BA%8F%E5%88%97/" title="JZ73-翻转单词序列">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">JZ73-翻转单词序列</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/02/21/JZ76-%E5%88%A0%E9%99%A4%E9%93%BE%E8%A1%A8%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E7%BB%93%E7%82%B9/" title="JZ76-删除链表中重复的结点">
-                        <span class="hidden-mobile">JZ76-删除链表中重复的结点</span>
+                      <a href="/2024/03/21/ds/%E5%93%88%E5%B8%8C%E8%A1%A8/" title="哈希表">
+                        <span class="hidden-mobile">哈希表</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
