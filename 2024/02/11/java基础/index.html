@@ -1,0 +1,1304 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="p&#39;y">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="day1&amp;&amp;day2  美国sun公司1995年推出 高级编程语言 Java之父：詹姆斯 高斯林 2009年被Oracle公司收购 世界上最流行的编程语言之一 可移植性好、安全可靠、性能较好 开发社区最完善，功能最丰富 Java SE：标准版 Java EE：企业版 Java可以做什么： 基本什么都可以干，主要做互联网系统开发      搭建java开发环境需要安装什么？去哪里下载">
+<meta property="og:type" content="article">
+<meta property="og:title" content="java基础">
+<meta property="og:url" content="http://example.com/2024/02/11/java%E5%9F%BA%E7%A1%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="day1&amp;&amp;day2  美国sun公司1995年推出 高级编程语言 Java之父：詹姆斯 高斯林 2009年被Oracle公司收购 世界上最流行的编程语言之一 可移植性好、安全可靠、性能较好 开发社区最完善，功能最丰富 Java SE：标准版 Java EE：企业版 Java可以做什么： 基本什么都可以干，主要做互联网系统开发      搭建java开发环境需要安装什么？去哪里下载">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-02-11T14:38:04.000Z">
+<meta property="article:modified_time" content="2024-02-11T14:39:25.590Z">
+<meta property="article:author" content="p&#39;y">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>java基础 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="java基础"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-02-11 22:38" pubdate>
+          February 11, 2024 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.6k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          39 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">java基础</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="day1-day2"><a href="#day1-day2" class="headerlink" title="day1&amp;&amp;day2"></a>day1&amp;&amp;day2</h1><hr>
+<ul>
+<li>美国sun公司1995年推出</li>
+<li>高级编程语言</li>
+<li>Java之父：詹姆斯 高斯林</li>
+<li>2009年被Oracle公司收购</li>
+<li>世界上最流行的编程语言之一</li>
+<li>可移植性好、安全可靠、性能较好</li>
+<li>开发社区最完善，功能最丰富</li>
+<li>Java SE：标准版</li>
+<li>Java EE：企业版</li>
+<li>Java可以做什么：<ul>
+<li>基本什么都可以干，主要做互联网系统开发</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ol>
+<li>搭建java开发环境需要安装什么？去哪里下载？<ol>
+<li>JDK（Java development Kit）开发者工具包；Oracle官网。</li>
+</ol>
+</li>
+<li>jdk目前发展到哪里了，LTS版本有哪些？企业使用的jdk有什么特定？<ol>
+<li>JDK17</li>
+<li>JDK8，11，17</li>
+<li>很多企业还在使用jdk 8</li>
+</ol>
+</li>
+<li>如何验证jdk是否安装成功了？<ol>
+<li>在命令行窗口中，输入java -version、javac -version 看版本号</li>
+</ol>
+</li>
+<li>java开发环境最重要的2个命令是什么？<ol>
+<li>Javac编译命令、java执行命令</li>
+</ol>
+</li>
+</ol>
+<hr>
+<h2 id="命令行窗口常用命令：1-盘符：切到某个盘下：D：，C：2-dir：查看当前路径下的文件信息3-cd路径：进入指定目录4-cls：清屏"><a href="#命令行窗口常用命令：1-盘符：切到某个盘下：D：，C：2-dir：查看当前路径下的文件信息3-cd路径：进入指定目录4-cls：清屏" class="headerlink" title="命令行窗口常用命令：1. 盘符：切到某个盘下：D：，C：2. dir：查看当前路径下的文件信息3. cd路径：进入指定目录4. cls：清屏"></a>命令行窗口常用命令：<br>1. 盘符：切到某个盘下：D：，C：<br>2. dir：查看当前路径下的文件信息<br>3. cd路径：进入指定目录<br>4. cls：清屏</h2><ol>
+<li>开发一个java程序需要经历哪些步骤？<ol>
+<li>编写、编译（javac）、运行（java）</li>
+</ol>
+</li>
+<li>java代码编写有什么基本要求？<ol>
+<li>文件后缀名必须是java结尾</li>
+<li>文件名称必须与代码的类名一致</li>
+<li>必须使用英文模式下的符号</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ul>
+<li>一个什么错都犯过的程序员，才是真正的程序员！</li>
+</ul>
+<hr>
+<ol>
+<li>编程语言发展历程：<ol>
+<li>机器语言</li>
+<li>汇编语言</li>
+<li>高级语言</li>
+</ol>
+</li>
+<li>为什么学习高级语言？<ol>
+<li>更简单：使用接近人类自己的语言书写，翻译器再将其翻译成计算机能理解的机器指令。</li>
+</ol>
+</li>
+<li>java程序的执行原理是什么样？<ol>
+<li>不管是什么样的高级语言，最终都是翻译成计算机底层可以识别的机器语言。</li>
+</ol>
+</li>
+<li>机器语言是由什么组成的啊？<ol>
+<li>0和1</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>JDK由什么组成<ol>
+<li>JVM 虚拟机：真正运行Java程序的地方</li>
+<li>核心类库：java自己写好的一些程序，可以调用</li>
+<li>开发工具：javac，java……</li>
+</ol>
+</li>
+<li>Java的跨平台是什么含义？是如何实现的<ol>
+<li>一次编译，处处可用</li>
+<li>我们的程序只需要开发一次，就可以在各种安装了jvm的系统平台上运行</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>什么是path环境变量<ol>
+<li>Path环境变量是用于配置程序的路径</li>
+<li>方便我们在命令行窗口的任意目录启动程序</li>
+</ol>
+</li>
+<li>jdk安装时，环境变量需要注意什么<ol>
+<li>较新版本的JDK会自动配置PATH环境变量，较老的JDK版本不会</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>使用idea开发java程序的步骤是什么？<ol>
+<li>project-&gt;module-&gt;package-&gt;class</li>
+</ol>
+</li>
+<li>创建都是用哪个关键字<ol>
+<li>new project&#x2F;module&#x2F;package&#x2F;class</li>
+</ol>
+</li>
+<li>idea中的java程序都是自动编译和运行的，那编译后的class文件在哪里？<ol>
+<li>在工程路径下的一个out文件夹里</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>IDEA常见快捷键<ol>
+<li>main&#x2F;psvm&#x2F;sout……</li>
+<li>ctrl D :复制当前行数据到下一行</li>
+<li>ctrl Y：删除所在行（但是建议使用ctrl X（剪切））</li>
+<li>alt + shift + 上下键：上下移动当前当前代码</li>
+<li>CTRL + &#x2F; :注释当前行</li>
+<li>CTRL + shift + &#x2F; ：对选中的代码块进行注释</li>
+</ol>
+</li>
+<li>文档注释：文档注释的内容是可以提取到一个程序说明文档中去的<br>&#x2F;**<br>注释内容<br>注释内容<br>*&#x2F;</li>
+</ol>
+<hr>
+<ol>
+<li>字面量是什么<ol>
+<li>数据在程序中的书写格式</li>
+</ol>
+</li>
+<li>字符、字符串在程序中的书写格式有什么要求？<ol>
+<li>字符必须单引号围起来，有且只能一个字符。</li>
+<li>字符串必须双引号围起来。</li>
+</ol>
+</li>
+<li>几个常见的特殊值的书写格式是：<ol>
+<li>true，false，null，\n,\t</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>变量是什么，变量的完整定义格式是什么样的？<ol>
+<li>变量是内存中的一块区域，用来存储一个数据的。</li>
+<li>数据类型 变量名称 &#x3D; 数据；</li>
+</ol>
+</li>
+<li>变量有什么好处？<ol start="3">
+<li>使用变量来记录要处理的数据，编写的代码更加灵活，管理代码更加方便。</li>
+</ol>
+</li>
+<li>变量有什么特点，有什么应用场景<ol>
+<li>变量里装的数据可以被替换。</li>
+</ol>
+</li>
+<li>使用变量有哪些注意点？<ol>
+<li>变量要先声明，才能使用。</li>
+<li>什么类型的变量，只能存储什么类型的数据。</li>
+<li>变量存在访问范围，同一个范围内，多个变量的名字不能一样。</li>
+<li>变量定义时可以不给赋初值，但是在使用时，变量里必须有值。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>什么是关键字<ol>
+<li>关键字就是java自己要用到的词，并且有特殊含义</li>
+<li>关键字不能用作类名或变量名</li>
+</ol>
+</li>
+<li>什么是标识符<ol>
+<li>标识符就是名字</li>
+<li>java的标识符：数字，字母，下划线，美元符，</li>
+<li>不能数字开头</li>
+<li>不能是关键字</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>数据在计算机底层是怎么存储的<ol>
+<li>都是采用二进制：使用0，1，逢2进1</li>
+</ol>
+</li>
+<li>如何快速的算出一个数据的二进制形式<ol>
+<li>二的次方</li>
+</ol>
+</li>
+<li>数据在计算机底层存储的最小单位是什么<ol>
+<li>字节，一个字节等于8个二进制位</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>字符数据在计算机中是怎么存的？<ol>
+<li>字符存的ascii码表中对应的数字的二进制形式</li>
+<li>A对应的是65</li>
+<li>a对应的是97</li>
+<li>0对应的是48</li>
+</ol>
+</li>
+<li>图片和音视频等文件的数据是怎么存储的？<ol>
+<li>二进制</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>数据类型分为几种？<ol>
+<li>基本数据类型：4大类8种。<ol>
+<li>整型：byte，short，int，long</li>
+<li>浮点型：float，double</li>
+<li>字符型：char</li>
+<li>boolean：布尔型</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>随便写的整数、小数，它们默认是什么类型<ol>
+<li>23：默认是int型，加上L&#x2F;l就是long类型的数据了</li>
+<li>23.8：默认是double类型，加上F&#x2F;f就是float型了</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>为什么要进行类型转换<ol>
+<li>存在不同类型的变量赋值给其他类型的变量</li>
+</ol>
+</li>
+<li>什么是 自动类型转换<ol>
+<li>类型范围小的变量，可以直接赋值给类型范围大的变量</li>
+</ol>
+</li>
+<li>表达式的自动类型转换是什么样的？<ol>
+<li>小范围的类型会自动转换成大范围的类型运算</li>
+</ol>
+</li>
+<li>表达式的最终结果类型是由谁决定的<ol>
+<li>最终类型由表达式种的最高类型决定</li>
+</ol>
+</li>
+<li>表达式的哪些类型转换是需要注意的<ol>
+<li>byte，short，char是直接转换成int类型参与运算 的</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>什么是强制类型转换<ol>
+<li>程序员手动将类型范围大的变量、数据赋值给类型范围小的变量</li>
+</ol>
+</li>
+<li>强制类型转换有哪些需要注意的<ol>
+<li>可能出现数据丢失</li>
+<li>小数强制转换成整数是直接截断小数保留整数</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>算术运算符有哪些<ol>
+<li>加减乘除和取余</li>
+</ol>
+</li>
+<li>&#x2F;需要注意什么<ol>
+<li>两个整数做除法，结果还是整数</li>
+</ol>
+</li>
+<li>+除了做加法运算，还有哪些功能<ol>
+<li>与字符串做+运算时会被当成连接符，其结果还是字符串。</li>
+<li>识别技巧：能算则算，不能算就当作连接符</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>自增自减运算符需要注意什么<ol>
+<li>只能对变量进行操作，不能对常量进行操作</li>
+</ol>
+</li>
+<li>自增自减运算符放在变量前后有什么区别<ol>
+<li>略，同C语言</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>赋值运算符有哪些<ol>
+<li>略，同C语言</li>
+</ol>
+</li>
+<li>扩展赋值运算符的作用和特点<ol>
+<li>可以实现数据的累加</li>
+<li>拓展的赋值运算符自带强制类型转换（&#x3D;&#x3D;注意！&#x3D;&#x3D;）</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>逻辑运算符有哪些，有什么特点<ol>
+<li>&amp; 和 &amp;&amp; 的区别：&amp;&amp;在第一个为false时，后一个条件不执行</li>
+<li>| 和|| 的区别：||在第一个为true时，第二个不再执行</li>
+</ol>
+</li>
+<li>实际开发中常用的逻辑运算符：<ol>
+<li>&amp;&amp; , || , !</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>API 是什么？API文档又是什么<ol>
+<li>Application Programming Interface，应用程序接口</li>
+<li>Java写好的程序，程序员可以直接调用</li>
+<li>API文档是API的使用说明书</li>
+</ol>
+</li>
+<li>java程序中如何实现接收用户键盘输入的数据？<ol>
+<li>使用java 的Scanner来完成。</li>
+<li>步骤：<ol>
+<li>导包</li>
+<li>使用扫描器对象Scanner</li>
+<li>调用api</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<h1 id="day3：流程控制"><a href="#day3：流程控制" class="headerlink" title="day3：流程控制"></a>day3：流程控制</h1><hr>
+<ol>
+<li>if分支是什么，举几个应用场景<ol>
+<li>可以根据条件，选择执行某段程序</li>
+</ol>
+</li>
+<li>if分支的写法有几种，各有什么特点<ol>
+<li>略，同C语言</li>
+</ol>
+</li>
+<li>if使用的注意事项<ol>
+<li>if语句后只有一行代码，{}可以省略不写，但是不推荐省略。</li>
+</ol>
+</li>
+<li>if和switch：<ol>
+<li>if在功能上远远强大于switch</li>
+<li>当前条件是区间的时候，应该使用if分支结构</li>
+<li>当条件是与一个个值比较的时候，switch分支更合适：格式良好，性能较好，代码优雅。</li>
+</ol>
+</li>
+<li>使用switch的注意事项：<ol>
+<li>表达式类型只能是byte、short、int、char，JDK5开始支持枚举类型，JDK 7开始支持String，不支持double、float、long</li>
+<li>case给出的值不允许重复，而且只能是常量，不能是变量</li>
+<li>正常使用switch的时候，不要忘记写break，否则会出现穿透现象。<ol>
+<li>switch穿透性在一些情况下可以简化代码。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>for循环格式和执行流程是什么样的<ol>
+<li>略，和C语言相同</li>
+</ol>
+</li>
+<li>for循环常见应用场景：<ol>
+<li>减少代码的重复编写，灵活地控制程序的执行</li>
+</ol>
+</li>
+<li>while循环的格式和执行流程<ol>
+<li>略，同C语言</li>
+</ol>
+</li>
+<li>while和for有什么区别，使用规范<ol>
+<li>功能上是完全一样的，for能解决的问题，while也能解决，反之亦然</li>
+<li>使用规范：<ol>
+<li>知道循环几次，用for</li>
+<li>不知道循环几次，用while</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<p> 死循环有几种写法</p>
+ <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span>(;;)&#123;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//经典写法</span><br><span class="hljs-keyword">while</span>(<span class="hljs-literal">true</span>)&#123;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">do</span>&#123;<br><br>&#125;<span class="hljs-keyword">while</span>(<span class="hljs-literal">true</span>);<br></code></pre></td></tr></table></figure>
+
+<hr>
+<ol>
+<li>Ramdom生成随机数需要几步<ol>
+<li>导包：import java.util.Random</li>
+<li>Random r &#x3D; new Random();</li>
+<li>int number &#x3D; r.nextlnt(10);</li>
+</ol>
+</li>
+<li>如何生成65~91之间的随机数？<ol>
+<li>65-91 &#x3D; 26 &#x3D;&#x3D; （0~26）+65</li>
+<li>int number &#x3D; r.nextlnt(27)+65;</li>
+</ol>
+</li>
+</ol>
+<h1 id="day4-数组"><a href="#day4-数组" class="headerlink" title="day4:数组"></a>day4:数组</h1><hr>
+<ol>
+<li>数组的静态初始化的写法和特点<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java">数据类型[] 数据名 = &#123;元素<span class="hljs-number">1</span>，元素<span class="hljs-number">2</span>，元素<span class="hljs-number">3</span>，……&#125;；<br><span class="hljs-type">int</span>[] ages = &#123;<span class="hljs-number">12</span>,<span class="hljs-number">24</span>,<span class="hljs-number">36</span>,<span class="hljs-number">48</span>,<span class="hljs-number">60</span>&#125;;<br><span class="hljs-type">double</span>[] scores = &#123;<span class="hljs-number">89.9</span>,<span class="hljs-number">99.5</span>,<span class="hljs-number">59.5</span>&#125;;<br><br><span class="hljs-comment">//完整格式</span><br>数据类型[] 数组名 = <span class="hljs-keyword">new</span> 数据类型[] &#123;元素<span class="hljs-number">1</span>，元素<span class="hljs-number">2</span>，元素<span class="hljs-number">3</span>，……&#125;;<br><span class="hljs-type">int</span>[] ages = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[] &#123;<span class="hljs-number">12</span>,<span class="hljs-number">24</span>,<span class="hljs-number">36</span>,<span class="hljs-number">48</span>,<span class="hljs-number">60</span>&#125;;<br></code></pre></td></tr></table></figure></li>
+<li>定义数组时需要注意什么<ol>
+<li>什么类型的数组必须存放什么类型的数据</li>
+<li>数据类型[] 数组名 也可以写成 数据类型 数据名[]</li>
+</ol>
+</li>
+<li>数组属于什么类型，数组变量名中存储的是什么<ol>
+<li>引用数据类型</li>
+<li>数组变量名存储的是数组在内存中的地址信息</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>如何访问数组元素<ol>
+<li>同C语言</li>
+</ol>
+</li>
+<li>如何访问数组的长度<ol>
+<li>数组名称.length</li>
+</ol>
+</li>
+<li>数组的最大索引是多少<ol>
+<li>数组名.length - 1(前提是数组元素个数大于0)</li>
+</ol>
+</li>
+<li>如果访问数组时，使用的索引超过了数组最大索引会出什么问题<ol>
+<li>执行程序时会出bug，出现一个索引越界的异常提示</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>什么是遍历<ol>
+<li>一个一个地访问容器中的数据</li>
+</ol>
+</li>
+<li>如何遍历数组<ol>
+<li>同C语言</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>动态初始化数组的写法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">数据类型[] 数组名 = <span class="hljs-keyword">new</span> 数据类型[长度]；<br><span class="hljs-type">int</span> ages[] = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">4</span>];<br></code></pre></td></tr></table></figure></li>
+<li>动态初始化数组后元素的默认值是什么样的<ol>
+<li>byte,short,int,char,long类型都是0</li>
+<li>float，double都是0.0</li>
+<li>boolean默认值是false</li>
+<li>String类型数组默认值是null</li>
+</ol>
+</li>
+<li>两种数组定义的方法各自适合什么业务场景<ol>
+<li>动态初始化适合开始不确定具体元素值，只知道元素个数的业务场景</li>
+<li>静态初始化适合一开始就知道要存入哪些元素值的业务场景</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>运行一个java程序，主要看JVM中包含的哪几部分内存区域<ol>
+<li>方法区</li>
+<li>栈内存</li>
+<li>堆内存</li>
+</ol>
+</li>
+<li>简单说说int a &#x3D; 20;int[] arr &#x3D; new int[3]这两行代码的执行原理<ol>
+<li>a是变量，直接放在栈中，a变量中存储的数据就是20这个值；</li>
+<li>new int[3] 是创建一个数组对象，会在堆内存中开辟区域存储3个整数；</li>
+<li>arr是变量，在栈中，arr中存储的是数组对象在堆内存中的地址值。</li>
+</ol>
+</li>
+<li>多个数组变量，指向同一个数组对象的原因是什么？需要注意什么？<ol>
+<li>原因是多个数组变量中存储的是同一个数组对象的地址。</li>
+<li>多个变量修改的都是同一个数组对象中的数据。</li>
+</ol>
+</li>
+<li>如果某个数组变量中存储的是null，代表什么意思，需要注意什么？<ol>
+<li>代表这个数组变量没有指向任何数组对象。</li>
+<li>可以输出这个变量，但是不能用这个变量去访问数据或访问数组长度，会报空指针异常：NullPointerException</li>
+</ol>
+</li>
+</ol>
+<h1 id="day5：方法"><a href="#day5：方法" class="headerlink" title="day5：方法"></a>day5：方法</h1><hr>
+<ol>
+<li>什么是方法<ol>
+<li>方法是一种语法结构，它可以把一段代码封装成一个功能，以便重复调用</li>
+<li>和C语言里的函数一样。</li>
+</ol>
+</li>
+<li>方法的完整格式是什么<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">修饰符 返回值类型 方法名（形参列表）&#123;<br>	方法体代码；<br>	<span class="hljs-keyword">return</span> 返回值；<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>方法怎么执行<ol>
+<li>被调用才会执行。</li>
+</ol>
+</li>
+<li>使用方法有什么好处<ol>
+<li>提高代码的复用性，提高开发效率，使程序逻辑清晰。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>方法的参数注意事项<ol>
+<li>略，同C语言的函数参数</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>方法的运行区域在哪里？<ol>
+<li>栈内存。</li>
+</ol>
+</li>
+<li>栈有什么特点？<ol>
+<li>先进后出。</li>
+<li>保证一个方法调用完另一个方法后，可以回来。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>Java的参数传递机制是什么样的？<ol>
+<li>值传递：传输的都是实参存储的值的副本。</li>
+</ol>
+</li>
+<li>基本类型和引用类型的参数在传递的时候有什么不同<ol>
+<li>都是值传递</li>
+<li>基本类型的参数传输存储的数据值</li>
+<li>引用类型的参数传输存储的地址值</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>什么是方法重载<ol>
+<li>一个类中，多个方法的名称相同，但它们形参列表不同</li>
+</ol>
+</li>
+<li>方法重载需要注意什么<ol>
+<li>一个类中，只要一些的方法的名称相同、形参列表不同，那么它们就是方法重载了，其他的都不管。</li>
+<li>形参列表不同：个数、类型、顺序不同，不关心形参的名称。</li>
+</ol>
+</li>
+<li>方法重载的应用场景<ol>
+<li>开发中我们经常需要为处理一类业务，提供多种解决方案，此时用方法重载来设计是很专业的。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>在无返回值的方法中，如果要跳出并结束当前方法的执行，怎么解决？<ol>
+<li>return：跳出并立即结束所在方法的执行。</li>
+</ol>
+</li>
+<li>break和continue在循环中的区别：<ol>
+<li>略，同C语言。</li>
+</ol>
+</li>
+</ol>
+<h1 id="day7：面向对象编程"><a href="#day7：面向对象编程" class="headerlink" title="day7：面向对象编程"></a>day7：面向对象编程</h1><hr>
+<ol>
+<li>面向对象编程有什么好处<ol>
+<li>更加符合人类思维，编程更加直观</li>
+<li>略，可以举例说明</li>
+</ol>
+</li>
+<li>对象是什么，如何得到<ol>
+<li>对象就是一种特殊的数据结构</li>
+<li>对象是用类new出来的，有了类就可以创建对象。</li>
+</ol>
+</li>
+<li>对象在计算机中的执行原理是什么<ol>
+<li>Student s1 &#x3D; new Student();</li>
+<li>每次new Student（），就是在堆内存中开辟一块内存区域代表一个学生对象。</li>
+<li>s1 变量里记住的是学生对象的地址。</li>
+</ol>
+</li>
+<li>如何识别引用类型的变量<ol>
+<li>Student s1 &#x3D; new Student();</li>
+<li>s1变量中存储的是对象的地址，因此变量s1也称为引用类型的变量。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>类和对象的一些注意事项 <ol>
+<li>类名建议用英文单词，首字母大写，满足驼峰模式，且要有意义，比如Student，Car……</li>
+<li>类中定义的变量也称为成员变量，类中定义的方法也称为成员方法</li>
+<li>成员变量本身存在默认值，默认值规则同数组</li>
+<li>一个代码文件中可以定义多个类，但只能有一个public类，且public类的类名必须和文件名相同</li>
+<li>对象和对象之间的数据不会相互影响，但多个变量指向同一个对象时就会互相影响</li>
+<li>如果某个对象没有一个变量引用它，该对象就无法被操作了，即所谓的垃圾对象。<ol>
+<li>当堆内存中的对象，没有被任何变量引用时，就会被判定为内存中的垃圾。</li>
+<li>java 存在自动垃圾回收机制，会自动清除掉垃圾对象，程序员不用操心。</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>this关键字是什么<ol>
+<li>this就是一个变量，在方法中用来拿到当前对象；</li>
+<li>哪个对象调用方法，this就指向哪个对象，也就是拿到哪个对象。</li>
+</ol>
+</li>
+<li>this关键字在实际开发中常用来干啥<ol>
+<li>用来解决对象的成员变量与方法内部变量的名称一样时的访问冲突问题。</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>构造器长什么样子<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span>&#123;<br>	<span class="hljs-keyword">public</span> <span class="hljs-title function_">Student</span><span class="hljs-params">()</span>&#123;<br>		…<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
+<li>构造器在哪里调用，常用来做什么<ol>
+<li>对象创建时：我们可以指定对象去调用哪个构造器执行。</li>
+<li>构造器常用于对象初始化。</li>
+</ol>
+</li>
+<li>构造器在使用时，有什么注意事项<ol>
+<li>类在设计时，如果不写构造器，java会为类自动生成一个无参构造器的</li>
+<li>一旦定义了有参构造器，java就不会帮我们的类生成无参构造器了，此时就建议自己手写一个无参构造器出来了</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>什么是封装<ol>
+<li>就是用类设计对象处理某一个事物的数据的时候，应该把要处理的数据，以及处理这些数据的方法，设计到一个对象中去。</li>
+<li>面向对象的三大特征：封装、继承、多态</li>
+</ol>
+</li>
+<li>封装的设计规范是什么<ol>
+<li>合理隐藏，合理暴露。</li>
+</ol>
+</li>
+<li>代码层面如何控制对象的成员的隐藏和公开<ol>
+<li>public和private修饰符</li>
+</ol>
+</li>
+</ol>
+<hr>
+<ol>
+<li>什么是实体类？有什么特点？<ol>
+<li>成员变量必须私有，且要为它们提供get、set方法；且必须有无参数构造器。</li>
+<li>仅仅只是一个用来保存数据的java类，可以用它创建对象，保存某个事物的数据。</li>
+</ol>
+</li>
+<li>实体类的应用场景是什么？<ol>
+<li>实体类对应的是软件开发里现在比较流行的开发方式，数据和数据的业务处理相分离。</li>
+</ol>
+</li>
+</ol>
+<hr>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>java基础</div>
+      <div>http://example.com/2024/02/11/java基础/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>p'y</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>February 11, 2024</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2024/02/12/%E5%B8%B8%E7%94%A8API/" title="常用API">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">常用API</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/01/25/JZ5/" title="JZ5">
+                        <span class="hidden-mobile">JZ5</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>
