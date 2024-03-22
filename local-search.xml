@@ -112,9 +112,21 @@
     <link href="/2024/03/22/JavaSE/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/"/>
     <url>/2024/03/22/JavaSE/%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="异常概述与异常体系结构"><a href="#异常概述与异常体系结构" class="headerlink" title="异常概述与异常体系结构"></a>异常概述与异常体系结构</h2><ul><li>异常：程序执行中发生的不正常情况。<ul><li>开发中的语法错误和逻辑错误不是异常。</li></ul></li><li>异常事件分类：<ul><li>Error：Java虚拟机无法解决的严重问题。如栈溢出。<ul><li>一般不编写针对性的代码进行处理。</li></ul></li><li>Exception：因编程错误或偶然的外在因素导致的一般性问题，可以使用针对性的代码进行处理。<ul><li>例如：<ul><li>空指针访问</li><li>试图读取不存在的文件</li><li>网络连接中断</li><li>数组下标越界</li></ul></li></ul></li></ul></li><li>解决方法：<ul><li>一遇到错误就终止程序的运行</li><li>程序员在编写程序时，就考虑到错误的检测、错误消息的提示以及错误的处理</li></ul></li><li>异常分类：<ul><li>编译时异常：编译器要求必须处置的异常。<ul><li>这类异常如果不处理，可能会带来意想不到的结果。</li></ul></li><li>运行时异常：编译器不要求强制处理的异常。一般是编程时的逻辑错误。<ul><li><code>java.lang.RuntimeException</code>类和它的子类都是运行时异常</li><li>这类异常可以不做处理，因为很普遍，全处理可能会影响程序的可读性和运行效率</li></ul></li></ul></li></ul><h2 id="常见异常"><a href="#常见异常" class="headerlink" title="常见异常"></a>常见异常</h2><ul><li>java.lang.RuntimeException</li><li>java.io.IOException</li><li>java.sql.SQLException</li><li>java.io.FileNotFoundException</li><li>java.lang.ClassNotFoundException</li><li>……</li></ul><h2 id="异常处理机制"><a href="#异常处理机制" class="headerlink" title="异常处理机制"></a>异常处理机制</h2><hr><h3 id="抓抛模型"><a href="#抓抛模型" class="headerlink" title="抓抛模型"></a>抓抛模型</h3><ul><li>执行过程出现异常，生成一个异常类对象<ul><li>由虚拟机自动生成或开发人员手动创建</li></ul></li><li>捕获异常：如果一个方法内抛出异常，该异常对象会被抛给调用者方法中处理。如果没有被处理，会被继续抛给这个调用方法的上层方法，直到异常被处理。</li><li>程序员通常只能处理Exception，对Error无能为力。</li><li>我们必须处理编译时异常，将其捕捉，转为运行时异常</li></ul><hr><h3 id="try-catch-finally"><a href="#try-catch-finally" class="headerlink" title="try-catch-finally"></a>try-catch-finally</h3><ol><li>将有可能出现异常的语句块放在try语句块中</li><li>catch语句块对异常对象进行处理<ol><li>每个try语句块可以伴随一个或多个catch语句块，处理可能产生的不同类型的异常对象</li></ol></li><li>捕获异常信息：<ol><li>getMessage（）：获取异常信息，返回字符串</li><li>pritStackTrace（）：获取异常类名和异常信息，以及异常出现在程序中的位置，返回值void</li></ol></li><li>finally：<ol><li>不论是否发生异常，是否接收到异常，catch语句中是否有return，finally语句块都会被执行。</li></ol></li></ol><h3 id="throws"><a href="#throws" class="headerlink" title="throws"></a>throws</h3><ul><li>用throw显示抛出异常，该方法不对异常进行处理，而是由方法的调用者负责处理。</li><li>throws语句可以声明抛出异常的列表</li><li>throws后面的异常类型可以是方法中产生的异常类型，也可以是它的父类</li><li>注意：<ul><li>重写方法不可以抛出比被重写方法范围更大的异常类型。</li></ul></li></ul><h2 id="手动抛出异常"><a href="#手动抛出异常" class="headerlink" title="手动抛出异常"></a>手动抛出异常</h2><ul><li>抛出的异常必须是Throwable或其子类的实例。</li><li>规范：<ul><li>先生成异常类对象</li><li>然后通过throw语句抛出（提交给java运行环境）</li></ul></li></ul><h2 id="用户自定义异常类"><a href="#用户自定义异常类" class="headerlink" title="用户自定义异常类"></a>用户自定义异常类</h2><ul><li>用户自定义异常类都是RuntimeException的子类</li><li>自定义：<ul><li>通常需要重写几个重载的构造器</li><li>需要提供serialVersionUID</li><li>通过throw抛出</li></ul></li><li>当异常出现时，根据名字判断异常类型</li></ul>]]></content>
     
     
+    <categories>
+      
+      <category>JavaSE</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+    </tags>
     
   </entry>
   
