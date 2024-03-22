@@ -99,9 +99,21 @@
     <link href="/2024/03/22/JavaSE/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/"/>
     <url>/2024/03/22/JavaSE/Java%E5%B8%B8%E7%94%A8%E7%B1%BB/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h1 id="字符串相关的类"><a href="#字符串相关的类" class="headerlink" title="字符串相关的类"></a>字符串相关的类</h1><h2 id="字符串常量区（在方法区）和堆内存"><a href="#字符串常量区（在方法区）和堆内存" class="headerlink" title="字符串常量区（在方法区）和堆内存"></a>字符串常量区（在方法区）和堆内存</h2><ul><li>字符串常量存储在字符串常量池</li><li>new的对象存储在堆</li></ul><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//在字符串常量池中创建了一个字面量为“a”的字符串</span><br><span class="hljs-type">String</span> <span class="hljs-variable">s1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span>;<br><span class="hljs-comment">//实际上原来的“a”紫都城对象已经丢弃了，现在在堆空间中产生了一个字符串“ab”</span><br><span class="hljs-comment">//如果多次执行这些改变串内容的操作，会导致大量副本字符串对象存留在内存中，降低效率</span><br>s1 = s1+<span class="hljs-string">&quot;b&quot;</span>;<br><span class="hljs-comment">//直接在字符串常量池中创建一个字面量为“ab”的字符串</span><br><span class="hljs-type">String</span> <span class="hljs-variable">s2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;ab&quot;</span>;<br><span class="hljs-comment">//s3指向字符串常量池中已经创建的“ab”字符串</span><br><span class="hljs-type">Staing</span> <span class="hljs-variable">s3</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;a&quot;</span> + <span class="hljs-string">&quot;b&quot;</span>;<br></code></pre></td></tr></table></figure><h2 id="String常用方法"><a href="#String常用方法" class="headerlink" title="String常用方法"></a>String常用方法</h2><h2 id="String与基本数据类型的转换"><a href="#String与基本数据类型的转换" class="headerlink" title="String与基本数据类型的转换"></a>String与基本数据类型的转换</h2><h1 id="JDK8之前的日期时间API"><a href="#JDK8之前的日期时间API" class="headerlink" title="JDK8之前的日期时间API"></a>JDK8之前的日期时间API</h1><h1 id="JDK8新日期时间API"><a href="#JDK8新日期时间API" class="headerlink" title="JDK8新日期时间API"></a>JDK8新日期时间API</h1><h1 id="Java比较器"><a href="#Java比较器" class="headerlink" title="Java比较器"></a>Java比较器</h1><h1 id="System类"><a href="#System类" class="headerlink" title="System类"></a>System类</h1><h1 id="Math类"><a href="#Math类" class="headerlink" title="Math类"></a>Math类</h1><h1 id="BigInteger与BigDecimal"><a href="#BigInteger与BigDecimal" class="headerlink" title="BigInteger与BigDecimal"></a>BigInteger与BigDecimal</h1>]]></content>
     
     
+    <categories>
+      
+      <category>JavaSE</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Java</tag>
+      
+    </tags>
     
   </entry>
   
