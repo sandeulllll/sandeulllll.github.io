@@ -16,15 +16,15 @@
   <meta name="author" content="p&#39;y">
   <meta name="keywords" content="">
   
-    <meta name="description" content="集合集合框架概述 两种体系： Collection List: 有序，可重复 Set: 无序，不可重复   Map： 双列数据，保存“key-value”键值对的集合      Collection 接口方法 是List，Set和Queue的父接口 方法： add size clear isEmpty contains remove equals toArray hashCode iterator">
+    <meta name="description" content="集合集合框架概述 两种体系： Collection：单列数据 List: 有序，可重复 Set: 无序，不可重复   Map： 双列数据，保存“key-value”键值对的集合      Collection 接口方法 是List，Set和Queue的父接口 方法（JDK并不提供具体实现，而是提供更具体的子接口）： add 添加 size 获取有效元素的个数 clear 清空集合 isEmpty">
 <meta property="og:type" content="article">
 <meta property="og:title" content="集合">
 <meta property="og:url" content="http://example.com/2024/03/21/JavaSE/%E9%9B%86%E5%90%88/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="集合集合框架概述 两种体系： Collection List: 有序，可重复 Set: 无序，不可重复   Map： 双列数据，保存“key-value”键值对的集合      Collection 接口方法 是List，Set和Queue的父接口 方法： add size clear isEmpty contains remove equals toArray hashCode iterator">
+<meta property="og:description" content="集合集合框架概述 两种体系： Collection：单列数据 List: 有序，可重复 Set: 无序，不可重复   Map： 双列数据，保存“key-value”键值对的集合      Collection 接口方法 是List，Set和Queue的父接口 方法（JDK并不提供具体实现，而是提供更具体的子接口）： add 添加 size 获取有效元素的个数 clear 清空集合 isEmpty">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-03-21T03:50:21.000Z">
-<meta property="article:modified_time" content="2024-03-22T12:24:31.647Z">
+<meta property="article:modified_time" content="2024-03-24T17:35:44.537Z">
 <meta property="article:author" content="p&#39;y">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
@@ -212,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          186 words
+          567 words
         
       </span>
     
@@ -223,7 +223,7 @@
         
         
         
-          2 mins
+          5 mins
         
       </span>
     
@@ -267,7 +267,7 @@
                 
                 <h1 id="集合"><a href="#集合" class="headerlink" title="集合"></a>集合</h1><h2 id="集合框架概述"><a href="#集合框架概述" class="headerlink" title="集合框架概述"></a>集合框架概述</h2><ul>
 <li>两种体系：<ul>
-<li>Collection<ul>
+<li>Collection：单列数据<ul>
 <li>List: 有序，可重复</li>
 <li>Set: 无序，不可重复</li>
 </ul>
@@ -281,29 +281,44 @@
 </ul>
 <h2 id="Collection-接口方法"><a href="#Collection-接口方法" class="headerlink" title="Collection 接口方法"></a>Collection 接口方法</h2><ul>
 <li>是List，Set和Queue的父接口</li>
-<li>方法：<ul>
-<li>add</li>
-<li>size</li>
-<li>clear</li>
-<li>isEmpty</li>
-<li>contains</li>
-<li>remove</li>
-<li>equals</li>
-<li>toArray</li>
-<li>hashCode</li>
+<li>方法（JDK并不提供具体实现，而是提供更具体的子接口）：<ul>
+<li>add 添加</li>
+<li>size 获取有效元素的个数</li>
+<li>clear 清空集合</li>
+<li>isEmpty 判断是否为空</li>
+<li>contains 是否包含某个元素</li>
+<li>remove 删除</li>
+<li>equals 逻辑等</li>
+<li>toArray 转成对象数组</li>
+<li>hashCode 获取集合对象的哈希值</li>
 <li>iterator:用于集合遍历</li>
 </ul>
 </li>
 </ul>
 <h2 id="iterator迭代器接口"><a href="#iterator迭代器接口" class="headerlink" title="iterator迭代器接口"></a>iterator迭代器接口</h2><ol>
-<li>默认指向第一个元素之前</li>
+<li>默认游标指向第一个元素之前</li>
 <li><code>Iterator iterator = coll.iterator();</code></li>
 <li>java 5.0 提供了foreach遍历，遍历集合的底层还是用迭代器实现</li>
 </ol>
-<h2 id="Collection子接口一：List"><a href="#Collection子接口一：List" class="headerlink" title="Collection子接口一：List"></a>Collection子接口一：List</h2><h3 id="常用的实现类"><a href="#常用的实现类" class="headerlink" title="常用的实现类"></a>常用的实现类</h3><h4 id="ArrayList：引用的可变长的数组"><a href="#ArrayList：引用的可变长的数组" class="headerlink" title="ArrayList：引用的可变长的数组"></a>ArrayList：引用的可变长的数组</h4><h4 id="LinkedList：双向-链表"><a href="#LinkedList：双向-链表" class="headerlink" title="LinkedList：双向 链表"></a>LinkedList：双向 链表</h4><h4 id="Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢"><a href="#Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢" class="headerlink" title="Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢"></a>Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢</h4><h2 id="Collection子接口二：Set"><a href="#Collection子接口二：Set" class="headerlink" title="Collection子接口二：Set"></a>Collection子接口二：Set</h2><ul>
+<h2 id="Collection子接口一：List"><a href="#Collection子接口一：List" class="headerlink" title="Collection子接口一：List"></a>Collection子接口一：List</h2><h5 id="通常使用List来替代数组：同样有序可重复，且每个元素有对应的顺序索引"><a href="#通常使用List来替代数组：同样有序可重复，且每个元素有对应的顺序索引" class="headerlink" title="通常使用List来替代数组：同样有序可重复，且每个元素有对应的顺序索引"></a>通常使用List来替代数组：同样有序可重复，且每个元素有对应的顺序索引</h5><h3 id="List接口的实现类"><a href="#List接口的实现类" class="headerlink" title="List接口的实现类"></a>List接口的实现类</h3><h4 id="ArrayList：引用的可变长的数组"><a href="#ArrayList：引用的可变长的数组" class="headerlink" title="ArrayList：引用的可变长的数组"></a>ArrayList：引用的可变长的数组</h4><h4 id="LinkedList：双向链表实现"><a href="#LinkedList：双向链表实现" class="headerlink" title="LinkedList：双向链表实现"></a>LinkedList：双向链表实现</h4><h5 id="使用于频繁插入删除"><a href="#使用于频繁插入删除" class="headerlink" title="使用于频繁插入删除"></a>使用于频繁插入删除</h5><h4 id="Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢"><a href="#Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢" class="headerlink" title="Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢"></a>Vector：和ArrayList的区别在于Vector是线程安全的，因此也比ArrayList慢</h4><hr>
+<h3 id="List接口方法（在Collection接口基础上增加了根据索引操作集合的方法）"><a href="#List接口方法（在Collection接口基础上增加了根据索引操作集合的方法）" class="headerlink" title="List接口方法（在Collection接口基础上增加了根据索引操作集合的方法）"></a>List接口方法（在Collection接口基础上增加了根据索引操作集合的方法）</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(<span class="hljs-type">int</span> index,Object ele)</span> <span class="hljs-comment">//在index位置插入ele元素</span><br>Object <span class="hljs-title function_">get</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span> <span class="hljs-comment">//获取指定index位置的元素</span><br>Object <span class="hljs-title function_">remove</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span> <span class="hljs-comment">// 移除指定index位置的元素，并返回此元素</span><br>Object <span class="hljs-title function_">set</span><span class="hljs-params">(<span class="hljs-type">int</span> index,Object ele)</span> <span class="hljs-comment">//设置指定位置的元素为ele</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">idexOf</span><span class="hljs-params">(Object ele)</span> <span class="hljs-comment">//返回ele在集合中首次出现的位置</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">lastIndexOf</span><span class="hljs-params">(Object ele)</span> <span class="hljs-comment">//返回ele在当前集合中末次出现的位置</span><br>List <span class="hljs-title function_">subList</span><span class="hljs-params">(<span class="hljs-type">int</span> fromIndex,<span class="hljs-type">int</span> toIndex)</span> <span class="hljs-comment">//返回从fromIndex到toIndex的子集合</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="Collection子接口二：Set"><a href="#Collection子接口二：Set" class="headerlink" title="Collection子接口二：Set"></a>Collection子接口二：Set</h2><h4 id="Set接口也是Collection的子接口，但没有提供额外的方法"><a href="#Set接口也是Collection的子接口，但没有提供额外的方法" class="headerlink" title="Set接口也是Collection的子接口，但没有提供额外的方法"></a>Set接口也是Collection的子接口，但没有提供额外的方法</h4><ul>
 <li>如果添加相等的元素，会添加失败</li>
-<li>set比较是否相等不是“&#x3D;&#x3D;”而是equals</li>
+<li>Set比较是否相等不是“&#x3D;&#x3D;”而是equals</li>
 </ul>
+<hr>
+<h3 id="Set接口实现类一：HashSet"><a href="#Set接口实现类一：HashSet" class="headerlink" title="Set接口实现类一：HashSet"></a>Set接口实现类一：HashSet</h3><hr>
+<h5 id="大多数使用Set集合时都使用HashSet"><a href="#大多数使用Set集合时都使用HashSet" class="headerlink" title="大多数使用Set集合时都使用HashSet"></a>大多数使用Set集合时都使用HashSet</h5><h5 id="按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能"><a href="#按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能" class="headerlink" title="按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能"></a>按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能</h5><hr>
+<h4 id="HashSet特点"><a href="#HashSet特点" class="headerlink" title="HashSet特点"></a>HashSet特点</h4><ol>
+<li>元素无序</li>
+<li>线程不安全</li>
+<li>集合元素可以是null</li>
+</ol>
+<p>HashSet集合判断两个元素是否相等：hashCode（）相等且equals（）返回值也相等</p>
+<h5 id="放在Set容器中的对象，必须重写equals（）方法和hashCode-方法——“相等的对象必须具有相同的散列码”"><a href="#放在Set容器中的对象，必须重写equals（）方法和hashCode-方法——“相等的对象必须具有相同的散列码”" class="headerlink" title="放在Set容器中的对象，必须重写equals（）方法和hashCode()方法——“相等的对象必须具有相同的散列码”"></a>放在Set容器中的对象，必须重写equals（）方法和hashCode()方法——“相等的对象必须具有相同的散列码”</h5><hr>
 <h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><h2 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a>Collections工具类</h2>
                 
               </div>
