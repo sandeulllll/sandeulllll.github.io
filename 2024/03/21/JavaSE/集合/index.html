@@ -23,11 +23,14 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="集合集合框架概述 两种体系： Collection：单列数据 List: 有序，可重复 Set: 无序，不可重复   Map： 双列数据，保存“key-value”键值对的集合      Collection 接口方法 是List，Set和Queue的父接口 方法（JDK并不提供具体实现，而是提供更具体的子接口）： add 添加 size 获取有效元素的个数 clear 清空集合 isEmpty">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403251637599.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403251633228.png">
 <meta property="article:published_time" content="2024-03-21T03:50:21.000Z">
-<meta property="article:modified_time" content="2024-03-24T17:35:44.537Z">
+<meta property="article:modified_time" content="2024-03-25T08:41:41.255Z">
 <meta property="article:author" content="p&#39;y">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403251637599.png">
   
   
   
@@ -212,7 +215,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          567 words
+          837 words
         
       </span>
     
@@ -223,7 +226,7 @@
         
         
         
-          5 mins
+          7 mins
         
       </span>
     
@@ -310,7 +313,8 @@
 <li>Set比较是否相等不是“&#x3D;&#x3D;”而是equals</li>
 </ul>
 <hr>
-<h3 id="Set接口实现类一：HashSet"><a href="#Set接口实现类一：HashSet" class="headerlink" title="Set接口实现类一：HashSet"></a>Set接口实现类一：HashSet</h3><hr>
+<h3 id="Set接口实现类一：HashSet"><a href="#Set接口实现类一：HashSet" class="headerlink" title="Set接口实现类一：HashSet"></a>Set接口实现类一：HashSet</h3><p><img src="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403251637599.png" srcset="/img/loading.gif" lazyload alt="image-20240325163726548"></p>
+<hr>
 <h5 id="大多数使用Set集合时都使用HashSet"><a href="#大多数使用Set集合时都使用HashSet" class="headerlink" title="大多数使用Set集合时都使用HashSet"></a>大多数使用Set集合时都使用HashSet</h5><h5 id="按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能"><a href="#按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能" class="headerlink" title="按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能"></a>按哈希算法来存储集合中的元素，因此有很好的存取、查找、删除性能</h5><hr>
 <h4 id="HashSet特点"><a href="#HashSet特点" class="headerlink" title="HashSet特点"></a>HashSet特点</h4><ol>
 <li>元素无序</li>
@@ -319,7 +323,22 @@
 </ol>
 <p>HashSet集合判断两个元素是否相等：hashCode（）相等且equals（）返回值也相等</p>
 <h5 id="放在Set容器中的对象，必须重写equals（）方法和hashCode-方法——“相等的对象必须具有相同的散列码”"><a href="#放在Set容器中的对象，必须重写equals（）方法和hashCode-方法——“相等的对象必须具有相同的散列码”" class="headerlink" title="放在Set容器中的对象，必须重写equals（）方法和hashCode()方法——“相等的对象必须具有相同的散列码”"></a>放在Set容器中的对象，必须重写equals（）方法和hashCode()方法——“相等的对象必须具有相同的散列码”</h5><hr>
-<h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><h2 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a>Collections工具类</h2>
+<h3 id="Set实现类二：LinkedHashSet：看起来是以插入顺序保存"><a href="#Set实现类二：LinkedHashSet：看起来是以插入顺序保存" class="headerlink" title="Set实现类二：LinkedHashSet：看起来是以插入顺序保存"></a>Set实现类二：LinkedHashSet：看起来是以插入顺序保存</h3><p>底层使用红黑树存储数据。</p>
+<p>看起来以插入顺序保存是因为使用双向链表维护元素的次序。</p>
+<h3 id="Set实现类三：TreeSet：集合元素处于排序状态"><a href="#Set实现类三：TreeSet：集合元素处于排序状态" class="headerlink" title="Set实现类三：TreeSet：集合元素处于排序状态"></a>Set实现类三：TreeSet：集合元素处于排序状态</h3><p>红黑树实现。</p>
+<hr>
+<h2 id="Map接口"><a href="#Map接口" class="headerlink" title="Map接口"></a>Map接口</h2><p><img src="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403251633228.png" srcset="/img/loading.gif" lazyload alt="image-20240325163301133"></p>
+<h3 id="常用方法"><a href="#常用方法" class="headerlink" title="常用方法"></a>常用方法</h3><h4 id="1-添加、删除、修改操作"><a href="#1-添加、删除、修改操作" class="headerlink" title="1. 添加、删除、修改操作"></a>1. 添加、删除、修改操作</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">Object <span class="hljs-title function_">put</span><span class="hljs-params">(Object key,Object value)</span>;<span class="hljs-comment">//将指定的key-value添加到当前map对象中</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">putAll</span><span class="hljs-params">(Map m)</span><span class="hljs-comment">//将m中所有的key-value对存放到当前map中</span><br>Object <span class="hljs-title function_">remove</span><span class="hljs-params">(Object key)</span><span class="hljs-comment">//移除指定key的key-value对，并返回value</span><br><span class="hljs-keyword">void</span> <span class="hljs-title function_">clear</span><span class="hljs-params">()</span><span class="hljs-comment">//清空当前map的数据</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="2-查询操作"><a href="#2-查询操作" class="headerlink" title="2. 查询操作"></a>2. 查询操作</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java">Object <span class="hljs-title function_">get</span><span class="hljs-params">(Object key)</span><span class="hljs-comment">//获取指定key对应的value</span><br><span class="hljs-type">boolean</span> <span class="hljs-title function_">containsKey</span><span class="hljs-params">(Object key)</span> <span class="hljs-comment">//是否包含指定的key</span><br><span class="hljs-type">boolean</span> <span class="hljs-title function_">contaisnValue</span><span class="hljs-params">(Object Value)</span><span class="hljs-comment">//是否包含指定的value</span><br><span class="hljs-type">int</span> <span class="hljs-title function_">size</span><span class="hljs-params">()</span> <span class="hljs-comment">//返回key-value对的个数</span><br><span class="hljs-type">boolean</span> <span class="hljs-title function_">isEmpty</span><span class="hljs-params">()</span> <span class="hljs-comment">//判断当前map是否为空</span><br><span class="hljs-type">boolean</span> <span class="hljs-title function_">equals</span><span class="hljs-params">(Object obj)</span><span class="hljs-comment">//判断当前map对象与参数对象obj是否逻辑相等</span><br></code></pre></td></tr></table></figure>
+
+<h4 id="3-元视图操作"><a href="#3-元视图操作" class="headerlink" title="3. 元视图操作"></a>3. 元视图操作</h4><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">Set <span class="hljs-title function_">keySet</span><span class="hljs-params">()</span> <span class="hljs-comment">//返回所有key构成的Set集合</span><br>Collection <span class="hljs-title function_">values</span><span class="hljs-params">()</span> <span class="hljs-comment">//返回所有value构成的Collection集合</span><br>Set <span class="hljs-title function_">entrySet</span><span class="hljs-params">()</span>: <span class="hljs-comment">//返回所有key-value对构成的Set集合</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><h4 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h4><ul>
+<li>jdk7及以前：数组+链表</li>
+<li>jdk8发布以后：数组+链表+红黑树</li>
+</ul>
+<h2 id="Collections工具类"><a href="#Collections工具类" class="headerlink" title="Collections工具类"></a>Collections工具类</h2>
                 
               </div>
             
