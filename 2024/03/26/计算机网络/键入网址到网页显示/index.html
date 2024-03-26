@@ -16,28 +16,22 @@
   <meta name="author" content="p&#39;y">
   <meta name="keywords" content="">
   
-    <meta name="description" content="TCP&#x2F;IP模型 为什么要有通信协议 不同设备的进程间通信 兼容各自设备，设计的规范   应用层： 只关心功能的实现，不关心数据如何传输 http，ftp，Telnet，DNS，SMTP   传输层：为应用层提供网络支持 应用层的数据包会传输给传输层 TCP和UDP TCP提供可靠传输，http采用的是TCP 数据包分段:每个分块叫TCP段   UDP只负责发送数据包，实时性更好 端口">
+    <meta name="description" content="浏览器解析URL URL元素组成 协议，例如http： &#x2F;&#x2F;：后面的字符表示服务器的名称 Web服务器 &#x2F;：目录名&#x2F;……文件名   URL实际上就是请求服务器里的资源  生成HTTP请求信息发送前进行域名解析获取IP地址 DNS域名解析 DNS服务器：专门保存web服务器域名和IP的对应关系   域名的层级关系 越靠右层级越高 树状结构： 根DNS服务器（.) 顶级域名服务器（.com)">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TCP&#x2F;IP模型">
-<meta property="og:url" content="http://example.com/2024/03/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP-IP%E6%A8%A1%E5%9E%8B/index.html">
+<meta property="og:title" content="键入网址到网页显示">
+<meta property="og:url" content="http://example.com/2024/03/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E9%94%AE%E5%85%A5%E7%BD%91%E5%9D%80%E5%88%B0%E7%BD%91%E9%A1%B5%E6%98%BE%E7%A4%BA/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="TCP&#x2F;IP模型 为什么要有通信协议 不同设备的进程间通信 兼容各自设备，设计的规范   应用层： 只关心功能的实现，不关心数据如何传输 http，ftp，Telnet，DNS，SMTP   传输层：为应用层提供网络支持 应用层的数据包会传输给传输层 TCP和UDP TCP提供可靠传输，http采用的是TCP 数据包分段:每个分块叫TCP段   UDP只负责发送数据包，实时性更好 端口">
+<meta property="og:description" content="浏览器解析URL URL元素组成 协议，例如http： &#x2F;&#x2F;：后面的字符表示服务器的名称 Web服务器 &#x2F;：目录名&#x2F;……文件名   URL实际上就是请求服务器里的资源  生成HTTP请求信息发送前进行域名解析获取IP地址 DNS域名解析 DNS服务器：专门保存web服务器域名和IP的对应关系   域名的层级关系 越靠右层级越高 树状结构： 根DNS服务器（.) 顶级域名服务器（.com)">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261444219.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261444193.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261450453.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261507135.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261515956.png">
-<meta property="article:published_time" content="2024-03-26T06:35:18.000Z">
-<meta property="article:modified_time" content="2024-03-26T07:16:23.000Z">
+<meta property="article:published_time" content="2024-03-26T07:37:24.000Z">
+<meta property="article:modified_time" content="2024-03-26T09:04:03.981Z">
 <meta property="article:author" content="p&#39;y">
 <meta property="article:tag" content="计算机基础">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261444219.png">
   
   
   
-  <title>TCP/IP模型 - Hexo</title>
+  <title>键入网址到网页显示 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,7 +189,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="TCP/IP模型"></span>
+            <span id="subtitle" data-typed-text="键入网址到网页显示"></span>
           
         </div>
 
@@ -206,7 +200,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-03-26 14:35" pubdate>
+        <time datetime="2024-03-26 15:37" pubdate>
           March 26, 2024 pm
         </time>
       </span>
@@ -218,7 +212,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          584 words
+          937 words
         
       </span>
     
@@ -229,7 +223,7 @@
         
         
         
-          5 mins
+          8 mins
         
       </span>
     
@@ -266,79 +260,120 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">TCP/IP模型</h1>
+            <h1 id="seo-header">键入网址到网页显示</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="TCP-IP模型"><a href="#TCP-IP模型" class="headerlink" title="TCP&#x2F;IP模型"></a>TCP&#x2F;IP模型</h1><ul>
-<li>为什么要有通信协议<ul>
-<li>不同设备的进程间通信</li>
-<li>兼容各自设备，设计的规范</li>
+                <h1 id="浏览器解析URL"><a href="#浏览器解析URL" class="headerlink" title="浏览器解析URL"></a>浏览器解析URL</h1><ul>
+<li>URL元素组成<ul>
+<li>协议，例如<code>http：</code></li>
+<li><code>//</code>：后面的字符表示服务器的名称</li>
+<li>Web服务器</li>
+<li><code>/</code>：目录名&#x2F;……文件名</li>
 </ul>
 </li>
-<li>应用层：<ul>
-<li>只关心功能的实现，不关心数据如何传输</li>
-<li>http，ftp，Telnet，DNS，SMTP</li>
+<li>URL实际上就是请求服务器里的资源</li>
+</ul>
+<h2 id="生成HTTP请求信息"><a href="#生成HTTP请求信息" class="headerlink" title="生成HTTP请求信息"></a>生成HTTP请求信息</h2><h2 id="发送前进行域名解析获取IP地址"><a href="#发送前进行域名解析获取IP地址" class="headerlink" title="发送前进行域名解析获取IP地址"></a>发送前进行域名解析获取IP地址</h2><ul>
+<li>DNS域名解析<ul>
+<li>DNS服务器：专门保存web服务器域名和IP的对应关系</li>
 </ul>
 </li>
-<li>传输层：为应用层提供网络支持<ul>
-<li>应用层的数据包会传输给传输层<img src="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261444219.png" srcset="/img/loading.gif" lazyload alt="image-20240326144457175"></li>
-<li>TCP和UDP</li>
-<li>TCP提供可靠传输，http采用的是TCP<ul>
-<li>数据包分段:每个分块叫TCP段<img src="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261444193.png" srcset="/img/loading.gif" lazyload alt="image-20240326144414091"></li>
+<li>域名的层级关系<ul>
+<li>越靠右层级越高</li>
+<li>树状结构：<ul>
+<li>根DNS服务器（.)</li>
+<li>顶级域名服务器（.com)</li>
+<li>权威DNS服务器（server.com)</li>
 </ul>
 </li>
-<li>UDP只负责发送数据包，实时性更好</li>
-<li>端口<ul>
-<li>将正在运行的程序（进程）区分开的编号</li>
-<li>传输层的报文恩中会携带端口号</li>
+<li>根域的DNS服务器信息保存在互联网中所有的DNS服务器中。</li>
+<li>客户端只要能够找到任意一台DNS服务器，就可以通过它找到根DNS服务器，再顺藤摸瓜找到其下层的某台目标DNS服务器。</li>
 </ul>
 </li>
+<li>域名解析的过程：<ul>
+<li>客户端发送DNS请求，发给本地DNS服务器</li>
+<li>本地DNS服务器查找缓冲表格，找到就直接返回，否则去找根DNS服务器</li>
+<li>根DNS服务器并不直接告诉本地DNS服务器对应的IP地址，而是告诉本地DNS服务器顶级域名服务器地址</li>
+<li>本地DNS服务器接收到顶级DNS服务器的地址后，向顶级DNS服务器发起请求</li>
+<li>顶级DNS服务器将权威DNS域名服务器的IP地址告诉本地DNS服务器</li>
+<li>本地DNS服务器收到权威DNS域名服务器的地址后，向权威域名服务器发起请求</li>
+<li>权威DNS服务器查询后将对应的ip地址告诉本地DNS</li>
+<li>本地DNS将ip地址返回给客户端，</li>
+<li>客户端和目标建立连接</li>
 </ul>
 </li>
-<li>网络层<ul>
-<li>传输层只为应用层服务，提供端口到端口的通信，实际的传输工作交给网络层<img src="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261450453.png" srcset="/img/loading.gif" lazyload alt="image-20240326145046374"></li>
-<li>IP协议:<ul>
-<li>将传输层的报文作为数据部分，加上IP头包装成IP报文</li>
-<li>对封装好的报文进行分片</li>
-</ul>
-</li>
-<li>IP地址：区分设备的编号,能根据IP地址找到对应的设备<ul>
-<li>网络号和主机号：<ul>
-<li>网络号负责标识该IP地址是属于哪个子网的</li>
-<li>主机号 负责标识同一子网下的主机</li>
-</ul>
-</li>
-<li>子网掩码：<ul>
-<li>如何根据子网掩码计算网络号和主机号：</li>
-<li>将IP地址和子网掩码做按位与运算得到网络号</li>
-<li>将子网掩码取反后与IP地址进行按位与运算，得到主机号</li>
-</ul>
-</li>
-<li>寻址过程:先匹配网络号，再匹配主机号</li>
-</ul>
-</li>
-<li>路由：当数据包到达一个网络节点，通过路由算法决定下一步走哪条路径<ul>
-<li>IP寻址知道要去哪儿，路由寻址决定走哪条路去（根据网络号进行转发）。</li>
+<li>缓存：<ul>
+<li>浏览器会先看自身与没有域名的缓冲，如果有就直接返回</li>
+<li>如果没有，会去问操作系统</li>
+<li>如果没有，去hosts文件查看</li>
+<li>如果还没有，才会去问本地DNS服务器</li>
 </ul>
 </li>
 </ul>
-</li>
-<li>网络接口层：为网络层提供链路级别的服务。<img src="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261507135.png" srcset="/img/loading.gif" lazyload alt="image-20240326150712041"><ul>
-<li>以太网：<ul>
-<li>电脑上的以太网接口，WiFi接口，以太网交换机，网线……都是以太网的组成部分</li>
-<li>IP通过IP地址判断目的地，以太网通过MAC地址识别网络上的设备。</li>
-<li>以太网在IP数据报前加上MAC头部。</li>
+<h2 id="将传输工作交给操作系统的协议栈"><a href="#将传输工作交给操作系统的协议栈" class="headerlink" title="将传输工作交给操作系统的协议栈"></a>将传输工作交给操作系统的协议栈</h2><ul>
+<li>应用程序通过Socket库来委托协议栈工作</li>
+<li>协议栈的上半部分：TCP和UDP协议，对应用的委托进行转发</li>
+<li>协议栈的下半部分：IP协议，发送网络数据包<ul>
+<li>ICMP：告知网络包传送过程中产生的错误以及各种控制信息</li>
+<li>ARP：根据IP地址查询MAC地址</li>
 </ul>
 </li>
-<li>MAC头部：包含了接收方和发送方的MAC地址。</li>
-<li>ARP协议：用来获取对方的MAC地址。</li>
-<li>网络链路层负责在WiFi、以太网这样的底层网络上发送原始数据包，工作在网卡层次。</li>
+<li>网卡驱动程序：控制网卡硬件</li>
+<li>网卡：完成实际的收发操作</li>
+</ul>
+<hr>
+<h3 id="TCP-可靠传输协议"><a href="#TCP-可靠传输协议" class="headerlink" title="TCP 可靠传输协议"></a>TCP 可靠传输协议</h3><h4 id="TCP报文头部格式"><a href="#TCP报文头部格式" class="headerlink" title="TCP报文头部格式"></a>TCP报文头部格式</h4><ul>
+<li>源端口号和目的端口号<ul>
+<li>谁发给谁（表示不同设备的进程间通信）</li>
+</ul>
+</li>
+<li>包的序号：<ul>
+<li>解决包乱序问题</li>
+</ul>
+</li>
+<li>确认号：<ul>
+<li>解决丢包的问题</li>
+</ul>
+</li>
+<li>状态位<ul>
+<li>SYN：发起一个连接</li>
+<li>ACK：回复</li>
+<li>RST：重新连接</li>
+<li>FIN：结束连接</li>
+</ul>
+</li>
+<li>窗口大小：<ul>
+<li>为了做流量控制</li>
+<li>通信双方都声明一个窗口，表示自己当前能够处理的能力</li>
+</ul>
+</li>
+<li>拥塞控制：<ul>
+<li>控制发送速度</li>
 </ul>
 </li>
 </ul>
-<p><img src="https://raw.githubusercontent.com/sandeulllll/blog-img/main/img/202403261515956.png" srcset="/img/loading.gif" lazyload alt="image-20240326151509898"></p>
+<hr>
+<h4 id="TCP建立连接：三次握手"><a href="#TCP建立连接：三次握手" class="headerlink" title="TCP建立连接：三次握手"></a>TCP建立连接：三次握手</h4><ul>
+<li>三次握手的目的：保证双方都有发送和接收的能力<ul>
+<li>一开始：客户端和服务端都处于 CLOSED状态</li>
+<li>服务端主动监听某个端口，变为LISTEN状态</li>
+<li>客户端主动发起连接SYN，之后客户端处于SYN-SENT状态</li>
+<li>服务端收到客户端发起的连接，返回SYN，并且ACK客户端的SYN，之后服务端处于SYN-RCVD</li>
+<li>客户端收到服务端发送的SYN和ACK后，发送对SYN确认的ACK，之后客户端变为ESTABLISHED状态，因为它一发一收成功了。</li>
+<li>服务端收到ACK的ACK后，处于ESTABLISHED状态，因为它也一发一收成功了、</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h4 id="TCP分割数据"><a href="#TCP分割数据" class="headerlink" title="TCP分割数据"></a>TCP分割数据</h4><ul>
+<li>MTU 和 MSS<ul>
+<li>MSS是数据块的最大长度</li>
+<li>MTU是数据块+TCP头部+IP头部</li>
+</ul>
+</li>
+</ul>
 
                 
               </div>
@@ -386,18 +421,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/03/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/%E9%94%AE%E5%85%A5%E7%BD%91%E5%9D%80%E5%88%B0%E7%BD%91%E9%A1%B5%E6%98%BE%E7%A4%BA/" title="键入网址到网页显示">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">键入网址到网页显示</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/03/25/JavaSE/Arrays%E5%B7%A5%E5%85%B7%E7%B1%BB/" title="Arrays工具类">
-                        <span class="hidden-mobile">Arrays工具类</span>
+                      <a href="/2024/03/26/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/TCP-IP%E6%A8%A1%E5%9E%8B/" title="TCP/IP模型">
+                        <span class="hidden-mobile">TCP/IP模型</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
