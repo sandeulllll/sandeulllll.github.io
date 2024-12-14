@@ -20,12 +20,12 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Mist","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Take it step by step">
+  <meta name="description" content="We ain&#39;t ever looking back, looking back no">
 <meta property="og:type" content="website">
 <meta property="og:title" content="My Blog">
 <meta property="og:url" content="http://example.com/index.html">
 <meta property="og:site_name" content="My Blog">
-<meta property="og:description" content="Take it step by step">
+<meta property="og:description" content="We ain&#39;t ever looking back, looking back no">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="巧克力蛋糕">
 <meta name="twitter:card" content="summary">
@@ -162,12 +162,401 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/14/TCP%E5%92%8CUDP%E7%9A%84%E5%8C%BA%E5%88%AB/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="巧克力蛋糕">
+      <meta itemprop="description" content="We ain't ever looking back, looking back no">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/12/14/TCP%E5%92%8CUDP%E7%9A%84%E5%8C%BA%E5%88%AB/" class="post-title-link" itemprop="url">TCP和UDP的区别</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-12-14 23:35:19 / Modified: 23:35:29" itemprop="dateCreated datePublished" datetime="2024-12-14T23:35:19+08:00">2024-12-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="TCP和UDP的区别"><a href="#TCP和UDP的区别" class="headerlink" title="TCP和UDP的区别"></a>TCP和UDP的区别</h2><h3 id="UDP的报文结构"><a href="#UDP的报文结构" class="headerlink" title="UDP的报文结构"></a>UDP的报文结构</h3><ol>
+<li>源端口</li>
+<li>目标端口</li>
+<li>长度</li>
+<li>校验和</li>
+<li>用户数据</li>
+</ol>
+<h3 id="UDP的特点"><a href="#UDP的特点" class="headerlink" title="UDP的特点"></a>UDP的特点</h3><ol>
+<li>面向非连接<ol>
+<li>传输数据时源端和终端不建立连接</li>
+</ol>
+</li>
+<li>不维护连接状态<ol>
+<li>无法处理丢包、乱序或重传<br> 3<br>  吞吐量只受限于<strong>数据生成效率</strong>、<strong>传输速率</strong>和<strong>机器性能</strong></li>
+</ol>
+</li>
+<li>尽最大努力交付，不保证可靠交付，不需要维持复杂的链接状态表</li>
+<li>面向报文，对应用程序提交的报文信息既不拆分也不合并<ol>
+<li>应用程序需要控制数据的大小</li>
+</ol>
+</li>
+</ol>
+<h3 id="TCP-和-UDP-的区别"><a href="#TCP-和-UDP-的区别" class="headerlink" title="TCP 和 UDP 的区别"></a>TCP 和 UDP 的区别</h3><ol>
+<li>面向连接vs无连接</li>
+<li>可靠性</li>
+<li>有序性</li>
+<li>速度</li>
+<li>量级<ol>
+<li>TCP——重量级，体现在报文头</li>
+<li>UDP——轻量级</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/14/TCP%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="巧克力蛋糕">
+      <meta itemprop="description" content="We ain't ever looking back, looking back no">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/12/14/TCP%E7%9A%84%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B/" class="post-title-link" itemprop="url">TCP的四次挥手</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-12-14 23:33:21 / Modified: 23:33:39" itemprop="dateCreated datePublished" datetime="2024-12-14T23:33:21+08:00">2024-12-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="TCP的四次挥手"><a href="#TCP的四次挥手" class="headerlink" title="TCP的四次挥手"></a>TCP的四次挥手</h2><h5 id="标志位的含义"><a href="#标志位的含义" class="headerlink" title="标志位的含义"></a>标志位的含义</h5><ul>
+<li><strong>ACK的逻辑</strong>：<ul>
+<li>ACK用来确认接收到对方的数据，<strong>ACK&#x3D;对方的SEQ+1</strong>。</li>
+</ul>
+</li>
+<li><strong>FIN和SEQ逻辑</strong>：<ul>
+<li><strong>FIN&#x3D;1</strong> 表示请求关闭。</li>
+<li><strong>SEQ</strong> 是发送数据包的序列号，标识当前包的位置。</li>
+</ul>
+</li>
+</ul>
+<h5 id="四次挥手发送的内容"><a href="#四次挥手发送的内容" class="headerlink" title="四次挥手发送的内容"></a>四次挥手发送的内容</h5><p>第一次：FIN &#x3D; 1，seq &#x3D; u<br>第二次：ACK &#x3D; 1，seq &#x3D; v，ack &#x3D; u + 1<br>第三次：FIN &#x3D; 1，seq &#x3D; w<br>第四次：ACK &#x3D; 1，seq &#x3D; u + 1，ack &#x3D; w + 1</p>
+<h5 id="为什么要最后一次挥手之后还要等待2MSL："><a href="#为什么要最后一次挥手之后还要等待2MSL：" class="headerlink" title="为什么要最后一次挥手之后还要等待2MSL："></a>为什么要最后一次挥手之后还要等待2MSL：</h5><ul>
+<li>在TCP四次挥手的最后一步，客户端发送一个 <strong>ACK</strong> 来确认服务器的 <strong>FIN</strong>。</li>
+<li>&#x3D;&#x3D;如果这个ACK丢失，服务器会重发它的FIN包&#x3D;&#x3D;。客户端需要等待一段时间（2MSL），以确保能够接收到服务器的重发FIN并重新确认，从而避免因丢包导致的连接未正常关闭。<br><strong>原因：</strong></li>
+</ul>
+<ol>
+<li>确保有足够的时间让对端收到ACK包</li>
+<li>避免新旧连接混淆<ol>
+<li>有些路由器会缓存数据包，不等待ＭＳＬ有可能导致延迟收到的数据包和新连接混在一起</li>
+</ol>
+</li>
+</ol>
+<h5 id="为什么需要四次挥手才能断开连接"><a href="#为什么需要四次挥手才能断开连接" class="headerlink" title="为什么需要四次挥手才能断开连接"></a>为什么需要四次挥手才能断开连接</h5><p>全双工通信，<br>发送方和接收方的都需要FIN和ACK报文</p>
+<h5 id="服务器出现大量CLOSED-WATI的原因："><a href="#服务器出现大量CLOSED-WATI的原因：" class="headerlink" title="服务器出现大量CLOSED-WATI的原因："></a>服务器出现大量CLOSED-WATI的原因：</h5><p>对方关闭socket连接，我方忙于读或写，没有及时关闭连接。</p>
+<ol>
+<li>检查代码，特别是资源释放的代码（程序里有bug）</li>
+<li>检查配置，特别是处理请求的线程配置</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/14/TCP%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="巧克力蛋糕">
+      <meta itemprop="description" content="We ain't ever looking back, looking back no">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/12/14/TCP%E7%9A%84%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/" class="post-title-link" itemprop="url">TCP的三次握手</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-12-14 23:32:05 / Modified: 23:32:42" itemprop="dateCreated datePublished" datetime="2024-12-14T23:32:05+08:00">2024-12-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="TCP的三次握手"><a href="#TCP的三次握手" class="headerlink" title="TCP的三次握手"></a>TCP的三次握手</h2><h3 id="传输控制协议TCP简介："><a href="#传输控制协议TCP简介：" class="headerlink" title="传输控制协议TCP简介："></a>传输控制协议TCP简介：</h3><p>TCP全称：Transmission Control Protocol</p>
+<h6 id="面向连接的、可靠的、基于字节流的传输层通信协议："><a href="#面向连接的、可靠的、基于字节流的传输层通信协议：" class="headerlink" title="面向连接的、可靠的、基于字节流的传输层通信协议："></a>面向连接的、可靠的、基于字节流的传输层通信协议：</h6><ol>
+<li><strong>面向连接</strong>：<ol>
+<li>在传输数据之前，TCP会通过“三次握手”建立一个可靠的连接。</li>
+</ol>
+</li>
+<li><strong>可靠</strong>：<ol>
+<li>TCP保证数据的顺序性、完整性和可靠性。</li>
+<li>顺序性：序列号：数据包都有序号</li>
+<li>完整性：<ol>
+<li>使用奇偶校验和函数来检验传输过程中是否有误，发送和接收时都要计算校验和</li>
+</ol>
+</li>
+<li>可靠性：<ol>
+<li>确认机制：对方收到则发送ACK确认</li>
+<li>重传机制：未收到ACK则重传</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>基于字节流</strong>：<ol>
+<li>TCP是一个字节流协议，应用层的数据传输是以字节流的形式进行的。</li>
+<li>发送方将数据分割成小的 TCP段（Segment），并通过网络发送。</li>
+</ol>
+</li>
+</ol>
+<h6 id="TCP报文的头部"><a href="#TCP报文的头部" class="headerlink" title="TCP报文的头部"></a>TCP报文的头部</h6><ol>
+<li><strong>源端口和目的端口</strong>：标识发送和接收的应用程序<ol>
+<li>Source Port：2字节</li>
+<li>Destination Port：2字节</li>
+<li>不包含IP地址信息</li>
+<li>IP地址 + 协议 + 端口号可以唯一标识网络中的一个进程，这种唯一标识叫做套接字socket</li>
+</ol>
+</li>
+<li><strong>序列号</strong>：Sequence Number<ol>
+<li>seq：序号，4字节</li>
+<li>标识数据的顺序，确保数据能按顺序接收。</li>
+</ol>
+</li>
+<li><strong>确认号</strong>：Acknowledge Number<ol>
+<li>接收方期望收到的下一个字节的序号</li>
+</ol>
+</li>
+<li><strong>标志位</strong>：8个<ol>
+<li>URG：紧急指针，为1时有效</li>
+<li>&#x3D;&#x3D;ACK&#x3D;&#x3D;：确认序号标志，为1时确认号有效</li>
+<li>PSH：push标志，为1时该报文段应尽快交给应用程序而不是在缓冲区排队</li>
+<li>RST：重置连接标志</li>
+<li>&#x3D;&#x3D;SYN&#x3D;&#x3D;：同步序号，用于建立连接过程</li>
+<li>&#x3D;&#x3D;FIN&#x3D;&#x3D;：finish标志，用于释放连接</li>
+</ol>
+</li>
+<li><strong>Window</strong>：滑动窗口的大小，告诉发送方接收方的缓冲区可用空间</li>
+<li><strong>Checksum</strong>：检验和，奇偶校验<ol>
+<li>确保数据的完整性，检测数据传输过程中是否发生了错误。</li>
+</ol>
+</li>
+</ol>
+<h3 id="TCP三次握手的流程"><a href="#TCP三次握手的流程" class="headerlink" title="TCP三次握手的流程"></a>TCP三次握手的流程</h3><p>在通信开始之前，TCP需要先建立一个连接，过程通过“三次握手”（Three-Way Handshake）完成。</p>
+<h6 id="第一次握手："><a href="#第一次握手：" class="headerlink" title="第一次握手："></a>第一次握手：</h6><p>客户端发送一个 <strong>SYN</strong>（同步）包给服务器<br>表示客户端请求建立连接，<br>并且向服务器发送一个初始序列号（ISN）。</p>
+<h6 id="第二次握手："><a href="#第二次握手：" class="headerlink" title="第二次握手："></a>第二次握手：</h6><p>服务器接收到客户端的SYN包后，<br>返回一个 <strong>SYN-ACK</strong>（同步-确认）包，表示同意建立连接，<br>并且向客户端发送服务器的初始序列号。</p>
+<h6 id="第三次握手："><a href="#第三次握手：" class="headerlink" title="第三次握手："></a>第三次握手：</h6><p>客户端收到服务器的SYN-ACK包后，向服务器发送一个 <strong>ACK</strong>（确认）包，表示连接建立成功。<br><strong>SYN</strong>：请求建立连接<br><strong>ACK</strong>：确认请求和数据<br><strong>seq</strong>：数据包的序列号<br><strong>ack</strong>：接收方希望接收的下一个字节，确认号</p>
+<h3 id="为什么需要三次握手才能建立起连接"><a href="#为什么需要三次握手才能建立起连接" class="headerlink" title="为什么需要三次握手才能建立起连接"></a>为什么需要三次握手才能建立起连接</h3><p>为了初始化seq Number的值（x和y）</p>
+<h3 id="首次握手的隐患：SYN超时"><a href="#首次握手的隐患：SYN超时" class="headerlink" title="首次握手的隐患：SYN超时"></a>首次握手的隐患：SYN超时</h3><h4 id="问题起因分析："><a href="#问题起因分析：" class="headerlink" title="问题起因分析："></a>问题起因分析：</h4><p>服务器收到客户端的SYN，回复SYN-ACK时没有收到ACK确认，<br>此时既不成功也不失败，<br>服务器会不断重试直到超时，<br>Linux默认等待63秒才断开连接</p>
+<h4 id="后果："><a href="#后果：" class="headerlink" title="后果："></a>后果：</h4><p>可能会使得服务器遭受SYN Flood攻击的风险<br>将服务器的SYN队列耗尽</p>
+<h4 id="对应的防护措施："><a href="#对应的防护措施：" class="headerlink" title="对应的防护措施："></a>对应的防护措施：</h4><p>SYN队列满后，回发SYN Cookie<br>如果是正常连接Client会回发SYN Cookie，直接建立连接<br>这样即便队列满了，依然能够建立连接</p>
+<h3 id="建立连接后，客户端出现故障怎么办"><a href="#建立连接后，客户端出现故障怎么办" class="headerlink" title="建立连接后，客户端出现故障怎么办"></a>建立连接后，客户端出现故障怎么办</h3><h4 id="保活机制："><a href="#保活机制：" class="headerlink" title="保活机制："></a>保活机制：</h4><p>像对方发送保活探测报文，<br>如果未收到响应则继续发送，<br>尝试次数达到保活探测数仍未收到响应则中断连接</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/14/TCP-IP%E5%8D%8F%E8%AE%AE/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+      <meta itemprop="name" content="巧克力蛋糕">
+      <meta itemprop="description" content="We ain't ever looking back, looking back no">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="My Blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/12/14/TCP-IP%E5%8D%8F%E8%AE%AE/" class="post-title-link" itemprop="url">TCP/IP协议</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+              
+
+              <time title="Created: 2024-12-14 23:27:05 / Modified: 23:27:21" itemprop="dateCreated datePublished" datetime="2024-12-14T23:27:05+08:00">2024-12-14</time>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="TCp-IP协议"><a href="#TCp-IP协议" class="headerlink" title="TCp&#x2F;IP协议"></a>TCp&#x2F;IP协议</h2><p>OIS的“实现”</p>
+<ol>
+<li><strong>链路层</strong>：包括物理层和数据链路层。<ol>
+<li>物理层：以二进制形式在物理媒体上传输数据。</li>
+<li>数据链路层：传输有地址的帧以及错误检测<ol>
+<li>***ARP、RARP，MTU，PPP</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><strong>网络层</strong>：为数据包选择路由<ol>
+<li>***IP，ICMP，OSPF，RIP</li>
+</ol>
+</li>
+<li><strong>传输层</strong>：提供端对端的接口<ol>
+<li>***TCP，UDP</li>
+</ol>
+</li>
+<li><strong>应用层</strong>：包括会话层、表示层和应用层。<ol>
+<li>会话层：解除或建立与别的节点的练习</li>
+<li>表示层：数据格式化、代码转换、数据加解密</li>
+<li>应用层：文件传输、电子邮件、文件服务、虚拟终端<ol>
+<li>***HTTP，FTP，Telnet</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/14/OSI%E4%B8%83%E5%B1%82%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/uploads/avatar.jpg">
       <meta itemprop="name" content="巧克力蛋糕">
-      <meta itemprop="description" content="Take it step by step">
+      <meta itemprop="description" content="We ain't ever looking back, looking back no">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -369,14 +758,14 @@
     <img class="site-author-image" itemprop="image" alt="巧克力蛋糕"
       src="/uploads/avatar.jpg">
   <p class="site-author-name" itemprop="name">巧克力蛋糕</p>
-  <div class="site-description" itemprop="description">Take it step by step</div>
+  <div class="site-description" itemprop="description">We ain't ever looking back, looking back no</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
